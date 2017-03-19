@@ -83,14 +83,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             togglePopover(sender)
         }
         
-        //let delay = 2.1 * Double(NSEC_PER_SEC)
-        //let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-        
-        //dispatch_after(delayTime, dispatch_get_main_queue()) { [weak self] in
-        //    self!.statusItem.button?.highlight(true)
-        //    print("hello")
-        //}
-        
     }
     
     

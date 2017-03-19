@@ -3,7 +3,7 @@
 //  Quiet
 //
 //  Created by Luis Orozco on 8/17/16.
-//  Copyright © 2016 Luis Orozco. All rights reserved.
+//  Copyright © 2017 Luis Orozco. All rights reserved.
 //
 
 import SQLite
