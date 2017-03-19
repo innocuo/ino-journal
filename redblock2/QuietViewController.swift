@@ -75,16 +75,16 @@ class QuietViewController: NSViewController, NSTextViewDelegate{
     func doSaveEntry(){
         let str:String = (textField.textStorage as NSAttributedString!).string
         do{
-            let id: Int64 = try dbmanager!.addEntry(str)
+            let timestamp:Int64 = Int64(Date().timeIntervalSince1970)
+            let id: Int64 = try dbmanager!.addEntry( qtext:str, qdate: timestamp )
             if(id > 0){
                 textField.textStorage?.setAttributedString(NSAttributedString(string: ""))
-                print(self.view.window!)
-                print("should close")
+                
+                print("New Entry Saved, id: " + String(id) )
                 self.delegate!.closePopover(self)
-                //self.view.window!.close()
             }
         }catch{
-            
+            print("Entry could not be saved")
         }
     }
 

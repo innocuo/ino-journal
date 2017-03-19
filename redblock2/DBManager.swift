@@ -11,35 +11,56 @@ import SQLite
 class DbManager{
     
     let db : Connection?
-    
+   
     init?(){
         print("db manager is going to init");
         
         do{
-            self.db =  try Connection("/Users/lorozco/Documents/db.sqlite3")
+            print("look for db path: " + DbManager.getDocumentsDirectory().appendingPathComponent( "db.sqlite3" ).absoluteString)
+            self.db =  try Connection(DbManager.getDocumentsDirectory().appendingPathComponent( "db.sqlite3" ).absoluteString)
             print ("db inited")
             
             let entries = Table("entries")
             let id = Expression<Int64>("id")
             let entry = Expression<String>("entry")
+            let date = Expression<Int64>("date")
             
             try self.db!.run(entries.create(ifNotExists:true){
                 t in
                 t.column(id, primaryKey: true)
                 t.column(entry)
+                t.column(date)
             })
+            
+            #if DEBUG
+                self.db!.trace({ (a : String) in print( a ) })
+            #endif
+
         }catch{
             print ("error connecting to db")
             return nil
-            
         }
     }
     
-    func addEntry(_ text:String) throws -> Int64{
+    func addEntry( qtext:String, qdate:Int64) throws -> Int64{
+        
         let entries = Table("entries")
-        let insert = entries.insert( Expression<String>("entry") <- text)
-        let rowid = try self.db!.run(insert)
+        let entry = Expression<String>("entry")
+        let date = Expression<Int64>("date")
+        
+        let insert = entries.insert(
+            entry <- qtext,
+            date <- qdate
+        )
+        let rowid = try self.db!.run( insert )
         
         return rowid
+    }
+    
+    private class func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        print(documentsDirectory)
+        return documentsDirectory
     }
 }
