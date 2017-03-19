@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F890CFC1E7EE90500F46B0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890CFB1E7EE90500F46B0A /* AppDelegate.swift */; };
+		9F890CFE1E7EE90500F46B0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890CFD1E7EE90500F46B0A /* ViewController.swift */; };
+		9F890D001E7EE90500F46B0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F890CFF1E7EE90500F46B0A /* Assets.xcassets */; };
+		9F890D031E7EE90500F46B0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F890D011E7EE90500F46B0A /* Main.storyboard */; };
+		9F890D0E1E7EE90500F46B0A /* redblock2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D0D1E7EE90500F46B0A /* redblock2Tests.swift */; };
+		9F890D191E7EE90500F46B0A /* redblock2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D181E7EE90500F46B0A /* redblock2UITests.swift */; };
+		9F890D2B1E7EE9BC00F46B0A /* QuietViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F890D2A1E7EE9BC00F46B0A /* QuietViewController.xib */; };
+		9F890D2D1E7EEB1900F46B0A /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D2C1E7EEB1900F46B0A /* Quote.swift */; };
+		9F890D2F1E7EEB3800F46B0A /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D2E1E7EEB3800F46B0A /* EventMonitor.swift */; };
+		9F890D311E7EEC5000F46B0A /* QuietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D301E7EEC5000F46B0A /* QuietViewController.swift */; };
+		9F890D331E7EEE5900F46B0A /* QuietTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D321E7EEE5900F46B0A /* QuietTextField.swift */; };
+		9F890D351E7EEF4700F46B0A /* HotKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D341E7EEF4700F46B0A /* HotKey.swift */; };
+		9F890D371E7F1D8600F46B0A /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F890D361E7F1D8600F46B0A /* SQLite.framework */; };
+		9F890D381E7F1D8600F46B0A /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F890D361E7F1D8600F46B0A /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F890D3C1E7F1DE500F46B0A /* SQLite.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9F890D3B1E7F1DE500F46B0A /* SQLite.framework.dSYM */; };
+		9F890D3E1E7F1E9800F46B0A /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D3D1E7F1E9800F46B0A /* DBManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9F890D0A1E7EE90500F46B0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F890CF01E7EE90500F46B0A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F890CF71E7EE90500F46B0A;
+			remoteInfo = redblock2;
+		};
+		9F890D151E7EE90500F46B0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F890CF01E7EE90500F46B0A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F890CF71E7EE90500F46B0A;
+			remoteInfo = redblock2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9F890D391E7F1D8700F46B0A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9F890D381E7F1D8600F46B0A /* SQLite.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F890D3A1E7F1DC000F46B0A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				9F890D3C1E7F1DE500F46B0A /* SQLite.framework.dSYM in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9F890CF81E7EE90500F46B0A /* redblock2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = redblock2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F890CFB1E7EE90500F46B0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9F890CFD1E7EE90500F46B0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9F890CFF1E7EE90500F46B0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9F890D021E7EE90500F46B0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9F890D041E7EE90500F46B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F890D091E7EE90500F46B0A /* redblock2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = redblock2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F890D0D1E7EE90500F46B0A /* redblock2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = redblock2Tests.swift; sourceTree = "<group>"; };
+		9F890D0F1E7EE90500F46B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F890D141E7EE90500F46B0A /* redblock2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = redblock2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F890D181E7EE90500F46B0A /* redblock2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = redblock2UITests.swift; sourceTree = "<group>"; };
+		9F890D1A1E7EE90500F46B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F890D2A1E7EE9BC00F46B0A /* QuietViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuietViewController.xib; sourceTree = "<group>"; };
+		9F890D2C1E7EEB1900F46B0A /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		9F890D2E1E7EEB3800F46B0A /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
+		9F890D301E7EEC5000F46B0A /* QuietViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuietViewController.swift; sourceTree = "<group>"; };
+		9F890D321E7EEE5900F46B0A /* QuietTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuietTextField.swift; sourceTree = "<group>"; };
+		9F890D341E7EEF4700F46B0A /* HotKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotKey.swift; sourceTree = "<group>"; };
+		9F890D361E7F1D8600F46B0A /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SQLite.framework; sourceTree = "<group>"; };
+		9F890D3B1E7F1DE500F46B0A /* SQLite.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = SQLite.framework.dSYM; sourceTree = "<group>"; };
+		9F890D3D1E7F1E9800F46B0A /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F890CF51E7EE90500F46B0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F890D371E7F1D8600F46B0A /* SQLite.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F890D061E7EE90500F46B0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F890D111E7EE90500F46B0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9F890CEF1E7EE90500F46B0A = {
+			isa = PBXGroup;
+			children = (
+				9F890D3B1E7F1DE500F46B0A /* SQLite.framework.dSYM */,
+				9F890D361E7F1D8600F46B0A /* SQLite.framework */,
+				9F890CFA1E7EE90500F46B0A /* redblock2 */,
+				9F890D0C1E7EE90500F46B0A /* redblock2Tests */,
+				9F890D171E7EE90500F46B0A /* redblock2UITests */,
+				9F890CF91E7EE90500F46B0A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9F890CF91E7EE90500F46B0A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F890CF81E7EE90500F46B0A /* redblock2.app */,
+				9F890D091E7EE90500F46B0A /* redblock2Tests.xctest */,
+				9F890D141E7EE90500F46B0A /* redblock2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F890CFA1E7EE90500F46B0A /* redblock2 */ = {
+			isa = PBXGroup;
+			children = (
+				9F890CFB1E7EE90500F46B0A /* AppDelegate.swift */,
+				9F890CFD1E7EE90500F46B0A /* ViewController.swift */,
+				9F890CFF1E7EE90500F46B0A /* Assets.xcassets */,
+				9F890D011E7EE90500F46B0A /* Main.storyboard */,
+				9F890D041E7EE90500F46B0A /* Info.plist */,
+				9F890D2A1E7EE9BC00F46B0A /* QuietViewController.xib */,
+				9F890D2C1E7EEB1900F46B0A /* Quote.swift */,
+				9F890D2E1E7EEB3800F46B0A /* EventMonitor.swift */,
+				9F890D301E7EEC5000F46B0A /* QuietViewController.swift */,
+				9F890D321E7EEE5900F46B0A /* QuietTextField.swift */,
+				9F890D341E7EEF4700F46B0A /* HotKey.swift */,
+				9F890D3D1E7F1E9800F46B0A /* DBManager.swift */,
+			);
+			path = redblock2;
+			sourceTree = "<group>";
+		};
+		9F890D0C1E7EE90500F46B0A /* redblock2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				9F890D0D1E7EE90500F46B0A /* redblock2Tests.swift */,
+				9F890D0F1E7EE90500F46B0A /* Info.plist */,
+			);
+			path = redblock2Tests;
+			sourceTree = "<group>";
+		};
+		9F890D171E7EE90500F46B0A /* redblock2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				9F890D181E7EE90500F46B0A /* redblock2UITests.swift */,
+				9F890D1A1E7EE90500F46B0A /* Info.plist */,
+			);
+			path = redblock2UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F890CF71E7EE90500F46B0A /* redblock2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F890D1D1E7EE90500F46B0A /* Build configuration list for PBXNativeTarget "redblock2" */;
+			buildPhases = (
+				9F890CF41E7EE90500F46B0A /* Sources */,
+				9F890CF51E7EE90500F46B0A /* Frameworks */,
+				9F890CF61E7EE90500F46B0A /* Resources */,
+				9F890D391E7F1D8700F46B0A /* Embed Frameworks */,
+				9F890D3A1E7F1DC000F46B0A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = redblock2;
+			productName = redblock2;
+			productReference = 9F890CF81E7EE90500F46B0A /* redblock2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9F890D081E7EE90500F46B0A /* redblock2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F890D201E7EE90500F46B0A /* Build configuration list for PBXNativeTarget "redblock2Tests" */;
+			buildPhases = (
+				9F890D051E7EE90500F46B0A /* Sources */,
+				9F890D061E7EE90500F46B0A /* Frameworks */,
+				9F890D071E7EE90500F46B0A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F890D0B1E7EE90500F46B0A /* PBXTargetDependency */,
+			);
+			name = redblock2Tests;
+			productName = redblock2Tests;
+			productReference = 9F890D091E7EE90500F46B0A /* redblock2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9F890D131E7EE90500F46B0A /* redblock2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F890D231E7EE90500F46B0A /* Build configuration list for PBXNativeTarget "redblock2UITests" */;
+			buildPhases = (
+				9F890D101E7EE90500F46B0A /* Sources */,
+				9F890D111E7EE90500F46B0A /* Frameworks */,
+				9F890D121E7EE90500F46B0A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F890D161E7EE90500F46B0A /* PBXTargetDependency */,
+			);
+			name = redblock2UITests;
+			productName = redblock2UITests;
+			productReference = 9F890D141E7EE90500F46B0A /* redblock2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F890CF01E7EE90500F46B0A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Luis Orozco";
+				TargetAttributes = {
+					9F890CF71E7EE90500F46B0A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 69GSE7LFKP;
+						ProvisioningStyle = Automatic;
+					};
+					9F890D081E7EE90500F46B0A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 69GSE7LFKP;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9F890CF71E7EE90500F46B0A;
+					};
+					9F890D131E7EE90500F46B0A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 69GSE7LFKP;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9F890CF71E7EE90500F46B0A;
+					};
+				};
+			};
+			buildConfigurationList = 9F890CF31E7EE90500F46B0A /* Build configuration list for PBXProject "redblock2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9F890CEF1E7EE90500F46B0A;
+			productRefGroup = 9F890CF91E7EE90500F46B0A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F890CF71E7EE90500F46B0A /* redblock2 */,
+				9F890D081E7EE90500F46B0A /* redblock2Tests */,
+				9F890D131E7EE90500F46B0A /* redblock2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F890CF61E7EE90500F46B0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F890D001E7EE90500F46B0A /* Assets.xcassets in Resources */,
+				9F890D031E7EE90500F46B0A /* Main.storyboard in Resources */,
+				9F890D2B1E7EE9BC00F46B0A /* QuietViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F890D071E7EE90500F46B0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F890D121E7EE90500F46B0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F890CF41E7EE90500F46B0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F890CFE1E7EE90500F46B0A /* ViewController.swift in Sources */,
+				9F890D2D1E7EEB1900F46B0A /* Quote.swift in Sources */,
+				9F890D331E7EEE5900F46B0A /* QuietTextField.swift in Sources */,
+				9F890D3E1E7F1E9800F46B0A /* DBManager.swift in Sources */,
+				9F890CFC1E7EE90500F46B0A /* AppDelegate.swift in Sources */,
+				9F890D311E7EEC5000F46B0A /* QuietViewController.swift in Sources */,
+				9F890D2F1E7EEB3800F46B0A /* EventMonitor.swift in Sources */,
+				9F890D351E7EEF4700F46B0A /* HotKey.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F890D051E7EE90500F46B0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F890D0E1E7EE90500F46B0A /* redblock2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F890D101E7EE90500F46B0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F890D191E7EE90500F46B0A /* redblock2UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F890D0B1E7EE90500F46B0A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F890CF71E7EE90500F46B0A /* redblock2 */;
+			targetProxy = 9F890D0A1E7EE90500F46B0A /* PBXContainerItemProxy */;
+		};
+		9F890D161E7EE90500F46B0A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F890CF71E7EE90500F46B0A /* redblock2 */;
+			targetProxy = 9F890D151E7EE90500F46B0A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9F890D011E7EE90500F46B0A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F890D021E7EE90500F46B0A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9F890D1B1E7EE90500F46B0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9F890D1C1E7EE90500F46B0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		9F890D1E1E7EE90500F46B0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 69GSE7LFKP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = redblock2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.innocuo.redblock2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9F890D1F1E7EE90500F46B0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 69GSE7LFKP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = redblock2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.innocuo.redblock2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		9F890D211E7EE90500F46B0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 69GSE7LFKP;
+				INFOPLIST_FILE = redblock2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.innocuo.redblock2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/redblock2.app/Contents/MacOS/redblock2";
+			};
+			name = Debug;
+		};
+		9F890D221E7EE90500F46B0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 69GSE7LFKP;
+				INFOPLIST_FILE = redblock2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.innocuo.redblock2Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/redblock2.app/Contents/MacOS/redblock2";
+			};
+			name = Release;
+		};
+		9F890D241E7EE90500F46B0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 69GSE7LFKP;
+				INFOPLIST_FILE = redblock2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.innocuo.redblock2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = redblock2;
+			};
+			name = Debug;
+		};
+		9F890D251E7EE90500F46B0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 69GSE7LFKP;
+				INFOPLIST_FILE = redblock2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.innocuo.redblock2UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = redblock2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F890CF31E7EE90500F46B0A /* Build configuration list for PBXProject "redblock2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F890D1B1E7EE90500F46B0A /* Debug */,
+				9F890D1C1E7EE90500F46B0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F890D1D1E7EE90500F46B0A /* Build configuration list for PBXNativeTarget "redblock2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F890D1E1E7EE90500F46B0A /* Debug */,
+				9F890D1F1E7EE90500F46B0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9F890D201E7EE90500F46B0A /* Build configuration list for PBXNativeTarget "redblock2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F890D211E7EE90500F46B0A /* Debug */,
+				9F890D221E7EE90500F46B0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9F890D231E7EE90500F46B0A /* Build configuration list for PBXNativeTarget "redblock2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F890D241E7EE90500F46B0A /* Debug */,
+				9F890D251E7EE90500F46B0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F890CF01E7EE90500F46B0A /* Project object */;
+}
