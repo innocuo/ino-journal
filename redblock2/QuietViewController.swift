@@ -38,7 +38,7 @@ class QuietViewController: NSViewController, NSTextViewDelegate{
         }
         
         textField.delegate = self
-        textField.textColor = NSColor.yellow
+        textField.textColor = NSColor(red: 209/255, green: 209/255, blue: 209/255, alpha: 1)
         textField.textContainerInset = NSSize(width:10, height: 10)
         currentQuoteIndex = 0
     }
@@ -64,7 +64,6 @@ class QuietViewController: NSViewController, NSTextViewDelegate{
         
         
         print("view did appear")
-        
         print(self.view.window!.makeFirstResponder(textField))
     }
     

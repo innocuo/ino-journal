@@ -17,25 +17,25 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="c22-O7-iKe">
-            <rect key="frame" x="0.0" y="0.0" width="476" height="280"/>
+            <rect key="frame" x="0.0" y="0.0" width="476" height="241"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <box focusRingType="none" appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="Ebq-VO-3Vn">
-                    <rect key="frame" x="52" y="142" width="375" height="5"/>
+                    <rect key="frame" x="10" y="111" width="456" height="5"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </box>
                 <scrollView identifier="TxtField" fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvu-sS-ysR">
-                    <rect key="frame" x="22" y="184" width="436" height="85"/>
+                    <rect key="frame" x="10" y="149" width="456" height="85"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <clipView key="contentView" ambiguous="YES" id="VYr-XS-nMt">
-                        <rect key="frame" x="1" y="1" width="419" height="83"/>
+                        <rect key="frame" x="1" y="1" width="439" height="83"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView ambiguous="YES" importsGraphics="NO" usesFontPanel="YES" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dataDetection="YES" dashSubstitution="YES" smartInsertDelete="YES" id="dd4-ij-89g" customClass="QuietTextField" customModule="redblock2" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="419" height="83"/>
+                                <rect key="frame" x="0.0" y="0.0" width="439" height="83"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                <size key="minSize" width="419" height="83"/>
+                                <size key="minSize" width="439" height="83"/>
                                 <size key="maxSize" width="463" height="10000000"/>
                                 <color key="insertionPointColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             </textView>
@@ -46,7 +46,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="jwZ-Nk-aVg">
-                        <rect key="frame" x="420" y="1" width="15" height="83"/>
+                        <rect key="frame" x="440" y="1" width="15" height="83"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <connections>
@@ -54,7 +54,7 @@
                     </connections>
                 </scrollView>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gew-2R-76u">
-                    <rect key="frame" x="428" y="40" width="34" height="68"/>
+                    <rect key="frame" x="434" y="40" width="34" height="68"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="NSGoRightTemplate" imagePosition="only" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XT0-bG-FWf">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -64,8 +64,17 @@
                         <action selector="goRight:" target="-2" id="bdJ-xv-fhE"/>
                     </connections>
                 </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdH-Ws-6YO">
+                    <rect key="frame" x="51" y="61" width="379" height="27"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="this is me" id="HeW-H0-cL0">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" red="0.53034354297655362" green="0.52515573753844891" blue="0.54810209424083767" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eFG-sS-w0w">
-                    <rect key="frame" x="20" y="49" width="35" height="68"/>
+                    <rect key="frame" x="8" y="40" width="35" height="68"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="NSGoLeftTemplate" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZKK-sd-dK3">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -76,9 +85,9 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1CT-ig-e69">
-                    <rect key="frame" x="188" y="21" width="102" height="32"/>
+                    <rect key="frame" x="400" y="3" width="72" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="push" title="Quit Quiet" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gQ9-9W-da2">
+                    <buttonCell key="cell" type="push" title="QUIT" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gQ9-9W-da2">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -86,10 +95,10 @@
                         <action selector="quit:" target="-2" id="Txf-tD-A17"/>
                     </connections>
                 </button>
-                <button identifier="SaveTxtBtn" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gE3-VT-BQx">
-                    <rect key="frame" x="394" y="149" width="70" height="32"/>
+                <button identifier="SaveTxtBtn" toolTip="Save" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gE3-VT-BQx">
+                    <rect key="frame" x="396" y="114" width="76" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vSz-Vu-fSN">
+                    <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="vSz-Vu-fSN">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
@@ -97,16 +106,8 @@
                         <action selector="saveEntry:" target="-2" id="qFQ-0I-1WQ"/>
                     </connections>
                 </button>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdH-Ws-6YO">
-                    <rect key="frame" x="51" y="70" width="379" height="27"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="this is me" id="HeW-H0-cL0">
-                        <font key="font" metaFont="system"/>
-                        <color key="textColor" red="0.30527792590000002" green="0.5728484948" blue="0.22374186469999999" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
             </subviews>
+            <point key="canvasLocation" x="132" y="148.5"/>
         </customView>
     </objects>
     <resources>

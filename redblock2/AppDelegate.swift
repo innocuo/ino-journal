@@ -29,7 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.target = self
             button.image = img
             
-            button.toolTip="Quiet.Log"
+            button.toolTip="InoJournal"
             //button.highlighted = true
             //button.highlight(true)
             
