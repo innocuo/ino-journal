@@ -65,7 +65,7 @@
                     </connections>
                 </button>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdH-Ws-6YO">
-                    <rect key="frame" x="51" y="61" width="379" height="27"/>
+                    <rect key="frame" x="51" y="43" width="379" height="62"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="this is me" id="HeW-H0-cL0">
                         <font key="font" metaFont="system"/>

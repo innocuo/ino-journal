@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import SQLite
 
 class QuietViewController: NSViewController, NSTextViewDelegate{
     
@@ -90,8 +91,14 @@ class QuietViewController: NSViewController, NSTextViewDelegate{
 
     
     func updateQuote(){
-        
-        textLabel.stringValue = String(describing: quotes[currentQuoteIndex])
+        do{
+            let row = try dbmanager!.getEntry( currentQuoteIndex )
+            let entry = Expression<String>("entry")
+            textLabel.stringValue = row[entry]
+        }catch{
+            
+        }
+        //textLabel.stringValue = String(describing: quotes[currentQuoteIndex])
     }
     
     func textView(_ textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
@@ -119,10 +126,20 @@ class QuietViewController: NSViewController, NSTextViewDelegate{
 
 extension QuietViewController{
     @IBAction func goLeft(_ sender: NSButton){
-        currentQuoteIndex = (currentQuoteIndex-1+quotes.count)%quotes.count
+        do{
+            let count = try self.dbmanager!.getEntriesCount()
+        currentQuoteIndex = (currentQuoteIndex-1+count)%count
+        }catch{
+            currentQuoteIndex = 0
+        }
     }
     @IBAction func goRight(_ sender: NSButton){
-        currentQuoteIndex = (currentQuoteIndex+1)%quotes.count
+        do{
+            let count = try self.dbmanager!.getEntriesCount()
+            currentQuoteIndex = (currentQuoteIndex+1)%count
+        }catch{
+            currentQuoteIndex = 0
+        }
     }
     @IBAction func quit(_ sender: NSButton){
         NSApplication.shared().terminate(sender)

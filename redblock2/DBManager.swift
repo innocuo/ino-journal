@@ -57,6 +57,20 @@ class DbManager{
         return rowid
     }
     
+    func getEntry(_ qoffset:Int) throws -> Row{
+        let entries = Table("entries")
+        let date = Expression<Int64>("date")
+        let query = entries.order(date.desc)
+            .limit(1, offset: qoffset)
+        
+        return try self.db!.pluck(query)!
+    }
+    
+    func getEntriesCount() throws -> Int{
+        let entries = Table("entries")
+        return try self.db!.scalar(entries.count)
+    }
+    
     private class func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentsDirectory = paths[0]
