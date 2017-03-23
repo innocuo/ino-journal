@@ -115,7 +115,13 @@ class QuietViewController: NSViewController, NSTextViewDelegate{
 
     override func keyDown(with theEvent: NSEvent) {
         super.keyDown(with: theEvent)
-        print(theEvent.keyCode )
+        print("key down: \(theEvent.keyCode)" )
+    }
+    
+    override func cancelOperation(_ sender: Any?) {
+        
+        textField.textStorage?.setAttributedString(NSAttributedString(string: ""))
+        self.delegate!.closePopover(self)
     }
     
     override func awakeFromNib() {

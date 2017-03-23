@@ -45,8 +45,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         popover.animates = false
         //popover.behavior = NSPopoverBehavior.Transient
         
-        
-        //let menu = NSMenu()
         menu.addItem(NSMenuItem(title: "Print Quote", action: #selector(AppDelegate.printQuote(_:)), keyEquivalent: "P"))
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Quit Quiet", action: #selector(AppDelegate.quitApp(_:)), keyEquivalent: "q"))
@@ -58,6 +56,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         eventMonitor.start()
         
+        //hot key is ctrl+option+command+o
         hotKey = HotKey.register(keyCode: UInt32(kVK_ANSI_O), modifiers: UInt32(cmdKey|optionKey|controlKey), block: {
             self.togglePopover(self)
         })

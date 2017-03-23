@@ -5,24 +5,21 @@ class QuietTextField: NSTextView {
     
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
-        
-        // Drawing code here.
     }
     
     
-    override func keyDown(with theEvent: NSEvent) {
-        Swift.print(theEvent.keyCode)
+    override func keyDown(with event: NSEvent) {
         
-        let    modifiers :uint32 = GetCurrentKeyModifiers();
-        Swift.print(modifiers)
+        //let    modifiers :uint32 = GetCurrentKeyModifiers();
+        //Swift.print(modifiers)
        
-        if theEvent.keyCode == 36 && theEvent.modifierFlags.intersection(
+        if event.keyCode == 36 && event.modifierFlags.intersection(
             .deviceIndependentFlagsMask) == .command {
             Swift.print("command-return pressed")
             self.doCommand(by: #selector(QuietViewController.doSaveEntry))
             return
         }
-        super.keyDown(with: theEvent)
+        super.keyDown(with: event)
         
     }
     
