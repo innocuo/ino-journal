@@ -1,6 +1,6 @@
 //
 //  Quote.swift
-//  Quiet
+//  InoJournal
 //
 //  Created by Luis Orozco on 8/2/16.
 //  Copyright © 2017 Luis Orozco. All rights reserved.

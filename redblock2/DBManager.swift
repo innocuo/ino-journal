@@ -1,6 +1,6 @@
 //
 //  DbManager.swift
-//  Quiet
+//  InoJournal
 //
 //  Created by Luis Orozco on 8/17/16.
 //  Copyright © 2017 Luis Orozco. All rights reserved.
