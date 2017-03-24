@@ -16,81 +16,94 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let popover = NSPopover()
     let menu = NSMenu()
     
+    private var button:NSStatusBarButton?
+    
     var eventMonitor: EventMonitor!
     private var hotKey: HotKey?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
         
-        if let button = statusItem.button {
+        //create menu bar icon button
+        self.button = statusItem.button!
+        if ((self.button) != nil) {
             let img = NSImage(named: "StatusBarButtonImage")
             img?.isTemplate = true
             
-            button.target = self
-            button.image = img
+            self.button?.target = self
+            self.button?.image = img
             
-            button.toolTip="InoJournal"
-            //button.highlighted = true
-            //button.highlight(true)
+            self.button?.toolTip="InoJournal"
             
-            //button.action = #selector(AppDelegate.togglePopover(_:))
-            button.action = #selector(AppDelegate.handleAction(_:))
-            button.sendAction(on: NSEventMask(rawValue: UInt64(Int((NSEventMask.leftMouseDown.rawValue | NSEventMask.leftMouseUp.rawValue | NSEventMask.rightMouseDown.rawValue | NSEventMask.rightMouseUp.rawValue)))))
+            //track left and right clicks, each shows a different thing
+            self.button?.action = #selector(AppDelegate.handleAction(_:))
+            self.button?.sendAction(on: NSEventMask(rawValue: UInt64(Int((NSEventMask.rightMouseDown.rawValue | NSEventMask.rightMouseUp.rawValue)))))
             
         }
         let quietView:QuietViewController = QuietViewController(nibName: "QuietViewController", bundle: nil)!
         quietView.setDelegate(self)
+        
+        
         popover.contentViewController = quietView
-        //popover.appearance = NSAppearance(named: NSAppearanceNameVibrantLight)
         popover.animates = false
+        
+        //popover.appearance = NSAppearance(named: NSAppearanceNameVibrantLight)
         //popover.behavior = NSPopoverBehavior.Transient
         
+        //add menu items
         menu.addItem(NSMenuItem(title: "Print Quote", action: #selector(AppDelegate.printQuote(_:)), keyEquivalent: "P"))
         menu.addItem(NSMenuItem.separator())
-        menu.addItem(NSMenuItem(title: "Quit Quiet", action: #selector(AppDelegate.quitApp(_:)), keyEquivalent: "q"))
+        menu.addItem(NSMenuItem(title: "Quit", action: #selector(AppDelegate.quitApp(_:)), keyEquivalent: "q"))
         
+        //this is needed for when user clicks on another statusItem
         eventMonitor = EventMonitor(mask: [.rightMouseUp , .leftMouseUp]) { [unowned self] event in
+            print("event monitor event happened")
             if self.popover.isShown{
-                self.closePopover(event)
+               self.closePopover(event)
             }
         }
         eventMonitor.start()
         
         //hot key is ctrl+option+command+o
         hotKey = HotKey.register(keyCode: UInt32(kVK_ANSI_O), modifiers: UInt32(cmdKey|optionKey|controlKey), block: {
-            self.togglePopover(self)
+            self.togglePopover( self )
         })
     }
+    
+    //this is needed when users ctrl+tab
+    func applicationWillResignActive(_ aNotification: Notification) {
+        self.statusItem.button?.highlight(false)
+        if self.popover.isShown{
+            self.closePopover( self )
+        }
+    }
+    
+    
     
     func handleAction(_ sender:AnyObject){
         
         let event:NSEvent! = NSApp.currentEvent!
-        if(event.type == .rightMouseDown){
-            closePopover(sender)
+        
+        //mouse up instead of down
+        //otherwise when you click on a menu, then you have to click twice to make
+        //the app react
+        if(event.type == .rightMouseUp){
+            closePopover(sender, false)
             statusItem.popUpMenu(menu)
-            //if let button = statusItem.button {
-            //   statusItem.menu = menu
-            //   statusItem.popUpStatusItemMenu(menu)
-            //}
-        }else if (event.type == .leftMouseUp){
-            print("left mouse up")
-            if popover.isShown{
-                print("button should be highlighted")
-                self.statusItem.button?.highlight(true)
-            }
-        }else if (event.type == .leftMouseDown){
-            togglePopover(sender)
         }
         
     }
     
     
-    
     func printQuote(_ sender:AnyObject){
+    
         let quoteText = "This is today"
         let quoteAuthor = "Mark"
         
         print("\(quoteText) - \(quoteAuthor)")
+    
+        
+        statusItem.button?.highlight(false)
+        statusItem.menu = nil
     }
     
     func quitApp(_ sender:AnyObject?){
@@ -98,22 +111,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func showPopover(_ sender:AnyObject?){
+        
         if let button = statusItem.button{
             popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
             statusItem.button?.highlight(true)
         }
-        
-        
     }
     
-    func closePopover(_ sender:AnyObject?){
+    func closePopover(_ sender:AnyObject?, _ deactivate_button:Bool = true){
+        
         popover.performClose(sender)
-        self.statusItem.button?.highlight(false)
+        if deactivate_button {
+            self.statusItem.button?.highlight(false)
+        }
     }
     
     func togglePopover(_ sender:AnyObject?){
-        print(popover.isShown)
-        print("---")
+        
         if popover.isShown{
             closePopover(sender)
         }else{
@@ -136,7 +150,6 @@ extension NSStatusBarButton {
         //   self.rightMouseDown(event)
         //return
         //}
-        
         self.highlight(true)
         (self.target as? AppDelegate)?.togglePopover(self)
     }
