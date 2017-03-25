@@ -67,16 +67,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9F890CF81E7EE90500F46B0A /* redblock2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = redblock2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F890CF81E7EE90500F46B0A /* InoJournal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InoJournal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F890CFB1E7EE90500F46B0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F890CFD1E7EE90500F46B0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9F890CFF1E7EE90500F46B0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F890D021E7EE90500F46B0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F890D041E7EE90500F46B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F890D091E7EE90500F46B0A /* redblock2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = redblock2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F890D091E7EE90500F46B0A /* InoJournalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InoJournalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F890D0D1E7EE90500F46B0A /* redblock2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = redblock2Tests.swift; sourceTree = "<group>"; };
 		9F890D0F1E7EE90500F46B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F890D141E7EE90500F46B0A /* redblock2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = redblock2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F890D141E7EE90500F46B0A /* InoJournalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InoJournalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F890D181E7EE90500F46B0A /* redblock2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = redblock2UITests.swift; sourceTree = "<group>"; };
 		9F890D1A1E7EE90500F46B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F890D2A1E7EE9BC00F46B0A /* QuietViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuietViewController.xib; sourceTree = "<group>"; };
@@ -131,9 +131,9 @@
 		9F890CF91E7EE90500F46B0A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9F890CF81E7EE90500F46B0A /* redblock2.app */,
-				9F890D091E7EE90500F46B0A /* redblock2Tests.xctest */,
-				9F890D141E7EE90500F46B0A /* redblock2UITests.xctest */,
+				9F890CF81E7EE90500F46B0A /* InoJournal.app */,
+				9F890D091E7EE90500F46B0A /* InoJournalTests.xctest */,
+				9F890D141E7EE90500F46B0A /* InoJournalUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,9 +178,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9F890CF71E7EE90500F46B0A /* redblock2 */ = {
+		9F890CF71E7EE90500F46B0A /* InoJournal */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9F890D1D1E7EE90500F46B0A /* Build configuration list for PBXNativeTarget "redblock2" */;
+			buildConfigurationList = 9F890D1D1E7EE90500F46B0A /* Build configuration list for PBXNativeTarget "InoJournal" */;
 			buildPhases = (
 				9F890CF41E7EE90500F46B0A /* Sources */,
 				9F890CF51E7EE90500F46B0A /* Frameworks */,
@@ -192,14 +192,14 @@
 			);
 			dependencies = (
 			);
-			name = redblock2;
+			name = InoJournal;
 			productName = redblock2;
-			productReference = 9F890CF81E7EE90500F46B0A /* redblock2.app */;
+			productReference = 9F890CF81E7EE90500F46B0A /* InoJournal.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9F890D081E7EE90500F46B0A /* redblock2Tests */ = {
+		9F890D081E7EE90500F46B0A /* InoJournalTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9F890D201E7EE90500F46B0A /* Build configuration list for PBXNativeTarget "redblock2Tests" */;
+			buildConfigurationList = 9F890D201E7EE90500F46B0A /* Build configuration list for PBXNativeTarget "InoJournalTests" */;
 			buildPhases = (
 				9F890D051E7EE90500F46B0A /* Sources */,
 				9F890D061E7EE90500F46B0A /* Frameworks */,
@@ -210,14 +210,14 @@
 			dependencies = (
 				9F890D0B1E7EE90500F46B0A /* PBXTargetDependency */,
 			);
-			name = redblock2Tests;
+			name = InoJournalTests;
 			productName = redblock2Tests;
-			productReference = 9F890D091E7EE90500F46B0A /* redblock2Tests.xctest */;
+			productReference = 9F890D091E7EE90500F46B0A /* InoJournalTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9F890D131E7EE90500F46B0A /* redblock2UITests */ = {
+		9F890D131E7EE90500F46B0A /* InoJournalUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9F890D231E7EE90500F46B0A /* Build configuration list for PBXNativeTarget "redblock2UITests" */;
+			buildConfigurationList = 9F890D231E7EE90500F46B0A /* Build configuration list for PBXNativeTarget "InoJournalUITests" */;
 			buildPhases = (
 				9F890D101E7EE90500F46B0A /* Sources */,
 				9F890D111E7EE90500F46B0A /* Frameworks */,
@@ -228,9 +228,9 @@
 			dependencies = (
 				9F890D161E7EE90500F46B0A /* PBXTargetDependency */,
 			);
-			name = redblock2UITests;
+			name = InoJournalUITests;
 			productName = redblock2UITests;
-			productReference = 9F890D141E7EE90500F46B0A /* redblock2UITests.xctest */;
+			productReference = 9F890D141E7EE90500F46B0A /* InoJournalUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -262,7 +262,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9F890CF31E7EE90500F46B0A /* Build configuration list for PBXProject "redblock2" */;
+			buildConfigurationList = 9F890CF31E7EE90500F46B0A /* Build configuration list for PBXProject "InoJournal" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -275,9 +275,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9F890CF71E7EE90500F46B0A /* redblock2 */,
-				9F890D081E7EE90500F46B0A /* redblock2Tests */,
-				9F890D131E7EE90500F46B0A /* redblock2UITests */,
+				9F890CF71E7EE90500F46B0A /* InoJournal */,
+				9F890D081E7EE90500F46B0A /* InoJournalTests */,
+				9F890D131E7EE90500F46B0A /* InoJournalUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -346,12 +346,12 @@
 /* Begin PBXTargetDependency section */
 		9F890D0B1E7EE90500F46B0A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9F890CF71E7EE90500F46B0A /* redblock2 */;
+			target = 9F890CF71E7EE90500F46B0A /* InoJournal */;
 			targetProxy = 9F890D0A1E7EE90500F46B0A /* PBXContainerItemProxy */;
 		};
 		9F890D161E7EE90500F46B0A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9F890CF71E7EE90500F46B0A /* redblock2 */;
+			target = 9F890CF71E7EE90500F46B0A /* InoJournal */;
 			targetProxy = 9F890D151E7EE90500F46B0A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -507,7 +507,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.innocuo.redblock2Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/redblock2.app/Contents/MacOS/redblock2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InoJournal.app/Contents/MacOS/InoJournal";
 			};
 			name = Debug;
 		};
@@ -523,7 +523,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.innocuo.redblock2Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/redblock2.app/Contents/MacOS/redblock2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InoJournal.app/Contents/MacOS/InoJournal";
 			};
 			name = Release;
 		};
@@ -560,7 +560,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9F890CF31E7EE90500F46B0A /* Build configuration list for PBXProject "redblock2" */ = {
+		9F890CF31E7EE90500F46B0A /* Build configuration list for PBXProject "InoJournal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F890D1B1E7EE90500F46B0A /* Debug */,
@@ -569,29 +569,32 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9F890D1D1E7EE90500F46B0A /* Build configuration list for PBXNativeTarget "redblock2" */ = {
+		9F890D1D1E7EE90500F46B0A /* Build configuration list for PBXNativeTarget "InoJournal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F890D1E1E7EE90500F46B0A /* Debug */,
 				9F890D1F1E7EE90500F46B0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		9F890D201E7EE90500F46B0A /* Build configuration list for PBXNativeTarget "redblock2Tests" */ = {
+		9F890D201E7EE90500F46B0A /* Build configuration list for PBXNativeTarget "InoJournalTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F890D211E7EE90500F46B0A /* Debug */,
 				9F890D221E7EE90500F46B0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		9F890D231E7EE90500F46B0A /* Build configuration list for PBXNativeTarget "redblock2UITests" */ = {
+		9F890D231E7EE90500F46B0A /* Build configuration list for PBXNativeTarget "InoJournalUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F890D241E7EE90500F46B0A /* Debug */,
 				9F890D251E7EE90500F46B0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

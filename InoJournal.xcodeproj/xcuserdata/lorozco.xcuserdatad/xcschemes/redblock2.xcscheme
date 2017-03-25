@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9F890CF71E7EE90500F46B0A"
-               BuildableName = "redblock2.app"
-               BlueprintName = "redblock2"
-               ReferencedContainer = "container:redblock2.xcodeproj">
+               BuildableName = "InoJournal.app"
+               BlueprintName = "InoJournal"
+               ReferencedContainer = "container:InoJournal.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9F890D081E7EE90500F46B0A"
-               BuildableName = "redblock2Tests.xctest"
-               BlueprintName = "redblock2Tests"
-               ReferencedContainer = "container:redblock2.xcodeproj">
+               BuildableName = "InoJournalTests.xctest"
+               BlueprintName = "InoJournalTests"
+               ReferencedContainer = "container:InoJournal.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9F890D131E7EE90500F46B0A"
-               BuildableName = "redblock2UITests.xctest"
-               BlueprintName = "redblock2UITests"
-               ReferencedContainer = "container:redblock2.xcodeproj">
+               BuildableName = "InoJournalUITests.xctest"
+               BlueprintName = "InoJournalUITests"
+               ReferencedContainer = "container:InoJournal.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9F890CF71E7EE90500F46B0A"
-            BuildableName = "redblock2.app"
-            BlueprintName = "redblock2"
-            ReferencedContainer = "container:redblock2.xcodeproj">
+            BuildableName = "InoJournal.app"
+            BlueprintName = "InoJournal"
+            ReferencedContainer = "container:InoJournal.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9F890CF71E7EE90500F46B0A"
-            BuildableName = "redblock2.app"
-            BlueprintName = "redblock2"
-            ReferencedContainer = "container:redblock2.xcodeproj">
+            BuildableName = "InoJournal.app"
+            BlueprintName = "InoJournal"
+            ReferencedContainer = "container:InoJournal.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9F890CF71E7EE90500F46B0A"
-            BuildableName = "redblock2.app"
-            BlueprintName = "redblock2"
-            ReferencedContainer = "container:redblock2.xcodeproj">
+            BuildableName = "InoJournal.app"
+            BlueprintName = "InoJournal"
+            ReferencedContainer = "container:InoJournal.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

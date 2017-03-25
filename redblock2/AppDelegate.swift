@@ -21,7 +21,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var eventMonitor: EventMonitor!
     private var hotKey: HotKey?
 
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
+    func applicationDidFinishLaunching(_ notification: Notification) {
         
         //create menu bar icon button
         self.button = statusItem.button!
@@ -39,9 +39,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             self.button?.sendAction(on: NSEventMask(rawValue: UInt64(Int((NSEventMask.rightMouseDown.rawValue | NSEventMask.rightMouseUp.rawValue)))))
             
         }
+        
+        //this is the popup where you enter journal entries
         let quietView:QuietViewController = QuietViewController(nibName: "QuietViewController", bundle: nil)!
         quietView.setDelegate(self)
-        
         
         popover.contentViewController = quietView
         popover.animates = false
@@ -61,7 +62,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                self.closePopover(event)
             }
         }
-        eventMonitor.start()
         
         //hot key is ctrl+option+command+o
         hotKey = HotKey.register(keyCode: UInt32(kVK_ANSI_O), modifiers: UInt32(cmdKey|optionKey|controlKey), block: {
@@ -69,14 +69,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         })
     }
     
+    //we should start event monitor only when the app is active,
+    //otherwise it's always listening. Creepy af! :)
+    func applicationWillBecomeActive(_ notification: Notification) {
+        eventMonitor.start()
+    }
+    
     //this is needed when users ctrl+tab
-    func applicationWillResignActive(_ aNotification: Notification) {
+    func applicationWillResignActive(_ notification: Notification) {
         self.statusItem.button?.highlight(false)
         if self.popover.isShown{
             self.closePopover( self )
         }
+        eventMonitor.stop()
     }
-    
     
     
     func handleAction(_ sender:AnyObject){
@@ -135,7 +141,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
-    func applicationWillTerminate(_ aNotification: Notification) {
+    func applicationWillTerminate(_ notification: Notification) {
         if let hk = hotKey {hk.unregister()}
     }
     

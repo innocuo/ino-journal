@@ -29,7 +29,7 @@ class QuietViewController: NSViewController, NSTextViewDelegate{
     
     override func viewWillAppear() {
         super.viewWillAppear()
-        print("megasaur")
+        
         if let frameView = self.view.window?.contentView?.superview {
             if backgroundView == nil {
                 backgroundView = QuietBackground(frame: frameView.bounds)

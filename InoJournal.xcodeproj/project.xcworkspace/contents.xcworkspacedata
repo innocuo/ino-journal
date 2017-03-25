@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:redblock2.xcodeproj">
+      location = "self:/Users/lorozco/htdocs/dam-lab/osx_quiet/redblock/redblock2/InoJournal.xcodeproj">
    </FileRef>
 </Workspace>
