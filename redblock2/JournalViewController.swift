@@ -14,6 +14,7 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
     @IBOutlet var textLabel:NSTextField!
     @IBOutlet var textField:NSTextView!
     @IBOutlet var saveBtn:NSButton!
+    @IBOutlet var scrollable:NSScrollView!
 
     let quotes = Quote.all
     let dbmanager = DbManager()
