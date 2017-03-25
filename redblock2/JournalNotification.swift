@@ -17,8 +17,6 @@ class JournalNotification: NSObject, NSUserNotificationCenterDelegate{
     }
     
     func userNotificationCenter(_ center: NSUserNotificationCenter, didActivate notification: NSUserNotification) {
-        print("clicked a notification")
-        //TODO: activate popup when this happens
     }
     
     func send(_ title: String, informativeText: String){

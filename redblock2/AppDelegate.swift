@@ -115,6 +115,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         statusItem.menu = nil
     }
     
+    
     func quitApp(_ sender:AnyObject?){
         NSApplication.shared().terminate(self)
     }
@@ -122,6 +123,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationWillTerminate(_ notification: Notification) {
         if let hk = hotKey {hk.unregister()}
+    }
+    
+    //convenience constructor to be called from other classes
+    func appDelegate () -> AppDelegate
+    {
+        print("get app delegate")
+        return NSApplication.shared().delegate as! AppDelegate
     }
     
     //MARK: Popover display
