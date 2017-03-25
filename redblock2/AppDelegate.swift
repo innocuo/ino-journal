@@ -41,10 +41,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         //this is the popup where you enter journal entries
-        let quietView:QuietViewController = QuietViewController(nibName: "QuietViewController", bundle: nil)!
-        quietView.setDelegate(self)
+        let journalView:JournalViewController = JournalViewController(nibName: "JournalViewController", bundle: nil)!
+        journalView.setDelegate(self)
         
-        popover.contentViewController = quietView
+        popover.contentViewController = journalView
         popover.animates = false
         
         //popover.appearance = NSAppearance(named: NSAppearanceNameVibrantLight)

@@ -13,10 +13,10 @@
 		9F890D031E7EE90500F46B0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F890D011E7EE90500F46B0A /* Main.storyboard */; };
 		9F890D0E1E7EE90500F46B0A /* redblock2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D0D1E7EE90500F46B0A /* redblock2Tests.swift */; };
 		9F890D191E7EE90500F46B0A /* redblock2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D181E7EE90500F46B0A /* redblock2UITests.swift */; };
-		9F890D2B1E7EE9BC00F46B0A /* QuietViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F890D2A1E7EE9BC00F46B0A /* QuietViewController.xib */; };
+		9F890D2B1E7EE9BC00F46B0A /* JournalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F890D2A1E7EE9BC00F46B0A /* JournalViewController.xib */; };
 		9F890D2D1E7EEB1900F46B0A /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D2C1E7EEB1900F46B0A /* Quote.swift */; };
 		9F890D2F1E7EEB3800F46B0A /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D2E1E7EEB3800F46B0A /* EventMonitor.swift */; };
-		9F890D311E7EEC5000F46B0A /* QuietViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D301E7EEC5000F46B0A /* QuietViewController.swift */; };
+		9F890D311E7EEC5000F46B0A /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D301E7EEC5000F46B0A /* JournalViewController.swift */; };
 		9F890D331E7EEE5900F46B0A /* QuietTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D321E7EEE5900F46B0A /* QuietTextField.swift */; };
 		9F890D351E7EEF4700F46B0A /* HotKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D341E7EEF4700F46B0A /* HotKey.swift */; };
 		9F890D371E7F1D8600F46B0A /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F890D361E7F1D8600F46B0A /* SQLite.framework */; };
@@ -79,10 +79,10 @@
 		9F890D141E7EE90500F46B0A /* InoJournalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InoJournalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F890D181E7EE90500F46B0A /* redblock2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = redblock2UITests.swift; sourceTree = "<group>"; };
 		9F890D1A1E7EE90500F46B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9F890D2A1E7EE9BC00F46B0A /* QuietViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuietViewController.xib; sourceTree = "<group>"; };
+		9F890D2A1E7EE9BC00F46B0A /* JournalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JournalViewController.xib; sourceTree = "<group>"; };
 		9F890D2C1E7EEB1900F46B0A /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		9F890D2E1E7EEB3800F46B0A /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
-		9F890D301E7EEC5000F46B0A /* QuietViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuietViewController.swift; sourceTree = "<group>"; };
+		9F890D301E7EEC5000F46B0A /* JournalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
 		9F890D321E7EEE5900F46B0A /* QuietTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuietTextField.swift; sourceTree = "<group>"; };
 		9F890D341E7EEF4700F46B0A /* HotKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotKey.swift; sourceTree = "<group>"; };
 		9F890D361E7F1D8600F46B0A /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SQLite.framework; sourceTree = "<group>"; };
@@ -121,9 +121,9 @@
 			children = (
 				9F890D3B1E7F1DE500F46B0A /* SQLite.framework.dSYM */,
 				9F890D361E7F1D8600F46B0A /* SQLite.framework */,
-				9F890CFA1E7EE90500F46B0A /* redblock2 */,
-				9F890D0C1E7EE90500F46B0A /* redblock2Tests */,
-				9F890D171E7EE90500F46B0A /* redblock2UITests */,
+				9F890CFA1E7EE90500F46B0A /* InoJournal */,
+				9F890D0C1E7EE90500F46B0A /* InoJournalTests */,
+				9F890D171E7EE90500F46B0A /* InoJournalUITests */,
 				9F890CF91E7EE90500F46B0A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -138,7 +138,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9F890CFA1E7EE90500F46B0A /* redblock2 */ = {
+		9F890CFA1E7EE90500F46B0A /* InoJournal */ = {
 			isa = PBXGroup;
 			children = (
 				9F890CFB1E7EE90500F46B0A /* AppDelegate.swift */,
@@ -146,32 +146,35 @@
 				9F890CFF1E7EE90500F46B0A /* Assets.xcassets */,
 				9F890D011E7EE90500F46B0A /* Main.storyboard */,
 				9F890D041E7EE90500F46B0A /* Info.plist */,
-				9F890D2A1E7EE9BC00F46B0A /* QuietViewController.xib */,
+				9F890D2A1E7EE9BC00F46B0A /* JournalViewController.xib */,
 				9F890D2C1E7EEB1900F46B0A /* Quote.swift */,
 				9F890D2E1E7EEB3800F46B0A /* EventMonitor.swift */,
-				9F890D301E7EEC5000F46B0A /* QuietViewController.swift */,
+				9F890D301E7EEC5000F46B0A /* JournalViewController.swift */,
 				9F890D321E7EEE5900F46B0A /* QuietTextField.swift */,
 				9F890D341E7EEF4700F46B0A /* HotKey.swift */,
 				9F890D3D1E7F1E9800F46B0A /* DBManager.swift */,
 			);
+			name = InoJournal;
 			path = redblock2;
 			sourceTree = "<group>";
 		};
-		9F890D0C1E7EE90500F46B0A /* redblock2Tests */ = {
+		9F890D0C1E7EE90500F46B0A /* InoJournalTests */ = {
 			isa = PBXGroup;
 			children = (
 				9F890D0D1E7EE90500F46B0A /* redblock2Tests.swift */,
 				9F890D0F1E7EE90500F46B0A /* Info.plist */,
 			);
+			name = InoJournalTests;
 			path = redblock2Tests;
 			sourceTree = "<group>";
 		};
-		9F890D171E7EE90500F46B0A /* redblock2UITests */ = {
+		9F890D171E7EE90500F46B0A /* InoJournalUITests */ = {
 			isa = PBXGroup;
 			children = (
 				9F890D181E7EE90500F46B0A /* redblock2UITests.swift */,
 				9F890D1A1E7EE90500F46B0A /* Info.plist */,
 			);
+			name = InoJournalUITests;
 			path = redblock2UITests;
 			sourceTree = "<group>";
 		};
@@ -289,7 +292,7 @@
 			files = (
 				9F890D001E7EE90500F46B0A /* Assets.xcassets in Resources */,
 				9F890D031E7EE90500F46B0A /* Main.storyboard in Resources */,
-				9F890D2B1E7EE9BC00F46B0A /* QuietViewController.xib in Resources */,
+				9F890D2B1E7EE9BC00F46B0A /* JournalViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +322,7 @@
 				9F890D331E7EEE5900F46B0A /* QuietTextField.swift in Sources */,
 				9F890D3E1E7F1E9800F46B0A /* DBManager.swift in Sources */,
 				9F890CFC1E7EE90500F46B0A /* AppDelegate.swift in Sources */,
-				9F890D311E7EEC5000F46B0A /* QuietViewController.swift in Sources */,
+				9F890D311E7EEC5000F46B0A /* JournalViewController.swift in Sources */,
 				9F890D2F1E7EEB3800F46B0A /* EventMonitor.swift in Sources */,
 				9F890D351E7EEF4700F46B0A /* HotKey.swift in Sources */,
 			);

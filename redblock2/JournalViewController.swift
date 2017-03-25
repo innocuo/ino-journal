@@ -9,7 +9,7 @@
 import Cocoa
 import SQLite
 
-class QuietViewController: NSViewController, NSTextViewDelegate{
+class JournalViewController: NSViewController, NSTextViewDelegate{
     
     @IBOutlet var textLabel:NSTextField!
     @IBOutlet var textField:NSTextView!
@@ -18,7 +18,7 @@ class QuietViewController: NSViewController, NSTextViewDelegate{
     let quotes = Quote.all
     let dbmanager = DbManager()
     
-    private var backgroundView:QuietBackground?
+    private var backgroundView:JournalBackground?
     private var delegate:AppDelegate?
     
     var currentQuoteIndex: Int = 0{
@@ -32,7 +32,7 @@ class QuietViewController: NSViewController, NSTextViewDelegate{
         
         if let frameView = self.view.window?.contentView?.superview {
             if backgroundView == nil {
-                backgroundView = QuietBackground(frame: frameView.bounds)
+                backgroundView = JournalBackground(frame: frameView.bounds)
                 backgroundView!.autoresizingMask = NSAutoresizingMaskOptions([.viewWidthSizable, .viewHeightSizable]);
                 frameView.addSubview(backgroundView!, positioned: NSWindowOrderingMode.below, relativeTo: frameView)
             }
@@ -130,7 +130,7 @@ class QuietViewController: NSViewController, NSTextViewDelegate{
     }
 }
 
-extension QuietViewController{
+extension JournalViewController{
     @IBAction func goLeft(_ sender: NSButton){
         do{
             let count = try self.dbmanager!.getEntriesCount()
@@ -156,7 +156,7 @@ extension QuietViewController{
     }
 }
 
-class QuietBackground:NSView{
+class JournalBackground:NSView{
     override func draw(_ dirtyRect:NSRect){
         NSColor.white.set()
         NSRectFill(self.bounds)

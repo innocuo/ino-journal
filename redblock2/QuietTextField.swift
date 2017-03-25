@@ -23,7 +23,7 @@ class QuietTextField: NSTextView {
         if event.keyCode == 36 && event.modifierFlags.intersection(
             .deviceIndependentFlagsMask) == .command {
             Swift.print("command-return pressed")
-            self.doCommand(by: #selector(QuietViewController.doSaveEntry))
+            self.doCommand(by: #selector(JournalViewController.doSaveEntry))
             return
         }
         super.keyDown(with: event)
