@@ -60,13 +60,13 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
     }
     
     override func viewDidAppear() {
+        
         super.viewDidAppear()
         NSApp.activate(ignoringOtherApps: true)
         textField.nextKeyView = saveBtn
         
-        
-        print("view did appear")
-        print(self.view.window!.makeFirstResponder(textField))
+        //print("view did appear")
+        self.view.window!.makeFirstResponder(textField)
     }
     
     func setDelegate(_ delegate:AppDelegate){
@@ -74,6 +74,7 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
     }
     
     func doSaveEntry(){
+        
         let str:String = (textField.textStorage as NSAttributedString!).string
         do{
             let timestamp:Int64 = Int64(Date().timeIntervalSince1970)
@@ -81,17 +82,17 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
             if(id > 0){
                 textField.textStorage?.setAttributedString(NSAttributedString(string: ""))
                 
-                print("New Entry Saved, id: " + String(id) )
-                self.delegate!.closePopover(self)
-            }
+                JournalNotification.shared.send("InoJournal", informativeText: "New entry saved: " + str)
+                self.delegate!.closePopover(self)            }
         }catch{
-            print("Entry could not be saved")
+            JournalNotification.shared.send("InoJournal", informativeText: "Entry could not be saved!")
         }
     }
 
 
     
     func updateQuote(){
+        
         do{
             let row = try dbmanager!.getEntry( currentQuoteIndex )
             let entry = Expression<String>("entry")

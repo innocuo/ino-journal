@@ -24,6 +24,7 @@
 		9F890D3C1E7F1DE500F46B0A /* SQLite.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9F890D3B1E7F1DE500F46B0A /* SQLite.framework.dSYM */; };
 		9F890D3E1E7F1E9800F46B0A /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D3D1E7F1E9800F46B0A /* DBManager.swift */; };
 		9FA6A5751E8605A90037D9BF /* QuietScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6A5741E8605A90037D9BF /* QuietScroller.swift */; };
+		9FE0E4641E86D3E700BB6A7B /* JournalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE0E4631E86D3E700BB6A7B /* JournalNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		9F890D3B1E7F1DE500F46B0A /* SQLite.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = SQLite.framework.dSYM; sourceTree = "<group>"; };
 		9F890D3D1E7F1E9800F46B0A /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		9FA6A5741E8605A90037D9BF /* QuietScroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuietScroller.swift; sourceTree = "<group>"; };
+		9FE0E4631E86D3E700BB6A7B /* JournalNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalNotification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 				9F890D341E7EEF4700F46B0A /* HotKey.swift */,
 				9F890D3D1E7F1E9800F46B0A /* DBManager.swift */,
 				9FA6A5741E8605A90037D9BF /* QuietScroller.swift */,
+				9FE0E4631E86D3E700BB6A7B /* JournalNotification.swift */,
 			);
 			name = InoJournal;
 			path = redblock2;
@@ -328,6 +331,7 @@
 				9FA6A5751E8605A90037D9BF /* QuietScroller.swift in Sources */,
 				9F890D311E7EEC5000F46B0A /* JournalViewController.swift in Sources */,
 				9F890D2F1E7EEB3800F46B0A /* EventMonitor.swift in Sources */,
+				9FE0E4641E86D3E700BB6A7B /* JournalNotification.swift in Sources */,
 				9F890D351E7EEF4700F46B0A /* HotKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

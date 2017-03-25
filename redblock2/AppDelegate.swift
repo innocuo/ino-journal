@@ -67,6 +67,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         hotKey = HotKey.register(keyCode: UInt32(kVK_ANSI_O), modifiers: UInt32(cmdKey|optionKey|controlKey), block: {
             self.togglePopover( self )
         })
+        
+        //use a delegate so notifications are always visible
+        NSUserNotificationCenter.default.delegate = JournalNotification.shared
     }
     
     //we should start event monitor only when the app is active,
@@ -116,6 +119,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSApplication.shared().terminate(self)
     }
     
+    
+    func applicationWillTerminate(_ notification: Notification) {
+        if let hk = hotKey {hk.unregister()}
+    }
+    
+    //MARK: Popover display
+    
     func showPopover(_ sender:AnyObject?){
         
         if let button = statusItem.button{
@@ -123,6 +133,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             statusItem.button?.highlight(true)
         }
     }
+    
     
     func closePopover(_ sender:AnyObject?, _ deactivate_button:Bool = true){
         
@@ -132,6 +143,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
+    
     func togglePopover(_ sender:AnyObject?){
         
         if popover.isShown{
@@ -139,10 +151,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }else{
             showPopover(sender)
         }
-    }
-    
-    func applicationWillTerminate(_ notification: Notification) {
-        if let hk = hotKey {hk.unregister()}
     }
     
 }
