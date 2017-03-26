@@ -126,7 +126,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     //convenience constructor to be called from other classes
-    func appDelegate () -> AppDelegate
+    static func shared() -> AppDelegate
     {
         print("get app delegate")
         return NSApplication.shared().delegate as! AppDelegate
