@@ -16,7 +16,6 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
     @IBOutlet var saveBtn:NSButton!
     @IBOutlet var scrollable:NSScrollView!
 
-    let quotes = Quote.all
     let dbmanager = DbManager()
     
     private var backgroundView:JournalBackground?
@@ -31,6 +30,8 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
     override func viewWillAppear() {
         super.viewWillAppear()
         
+        print ("view will appear")
+        
         if let frameView = self.view.window?.contentView?.superview {
             if backgroundView == nil {
                 backgroundView = JournalBackground(frame: frameView.bounds)
@@ -39,9 +40,6 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
             }
         }
         
-        textField.delegate = self
-        textField.textColor = NSColor(red: 209/255, green: 209/255, blue: 209/255, alpha: 1)
-        textField.textContainerInset = NSSize(width:10, height: 10)
         currentQuoteIndex = 0
     }
     
@@ -49,23 +47,23 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
         
         super.viewDidLoad()
         
-        //self.view.wantsLayer = true
+        print ("view did load")
         
-        print("view did load")
-        
+        textField.delegate = self
+        textField.textColor = NSColor(red: 209/255, green: 209/255, blue: 209/255, alpha: 1)
+        textField.textContainerInset = NSSize(width:10, height: 10)
         textField.becomeFirstResponder()
-        
-        //let color : CGColorRef = CGColorCreateGenericRGB(1.0, 1.0, 1.0, 1.0)
-        //self.view.layer?.backgroundColor = color
     }
+    
     
     override func viewDidAppear() {
         
         super.viewDidAppear()
+       
+        //this is necessary for when you use the hotkey,
+        //otherwise it doesn't focus on the text field
         NSApp.activate(ignoringOtherApps: true)
-        textField.nextKeyView = saveBtn
         
-        //print("view did appear")
         self.view.window!.makeFirstResponder(textField)
     }
     
@@ -100,25 +98,28 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
         }catch{
             
         }
-        //textLabel.stringValue = String(describing: quotes[currentQuoteIndex])
     }
     
+    //from NSTextViewDelegate
+    //self is added as delegate of the text field, so self will receive commands
+    //from the text field
     func textView(_ textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
-        print(commandSelector)
+        
+        //if tab is pressed in text field, focus on saved button
+        //used because without it, the tab is entered as part of the text
+        //This is also why textField.nextKeyView = saveBtn would be useless
         if commandSelector == #selector(NSResponder.insertTab(_:)) && textView == self.textField {
-            self.view.window!.makeFirstResponder(self.saveBtn)
+            self.view.window!.makeFirstResponder( saveBtn )
             return true
-        }else if commandSelector == #selector(self.doSaveEntry) && textView == self.textField{
-            print("et voila")
-            // self.doSaveEntry()
         }
+        
+        //a command used in QuietTextField is JournalViewController.doSaveEntry, 
+        //if we wanted to use it here, we can do
+        //commandSelector == #selector(self.doSaveEntry)
+        
         return false
     }
-
-    override func keyDown(with theEvent: NSEvent) {
-        super.keyDown(with: theEvent)
-        print("key down: \(theEvent.keyCode)" )
-    }
+    
     
     override func cancelOperation(_ sender: Any?) {
         
@@ -126,10 +127,8 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
         self.delegate!.closePopover(self)
     }
     
-    override func awakeFromNib() {
-        print ("layer")
-        
-    }
+    
+    //override func awakeFromNib() {}
 }
 
 extension JournalViewController{

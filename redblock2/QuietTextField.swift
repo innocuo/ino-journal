@@ -20,9 +20,9 @@ class QuietTextField: NSTextView {
         //let    modifiers :uint32 = GetCurrentKeyModifiers();
         //Swift.print(modifiers)
        
+        //when command return is pressed
         if event.keyCode == 36 && event.modifierFlags.intersection(
             .deviceIndependentFlagsMask) == .command {
-            Swift.print("command-return pressed")
             self.doCommand(by: #selector(JournalViewController.doSaveEntry))
             return
         }
