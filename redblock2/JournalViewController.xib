@@ -18,45 +18,15 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView wantsLayer="YES" id="c22-O7-iKe">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="241"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="260"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <box focusRingType="none" appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="Ebq-VO-3Vn">
-                    <rect key="frame" x="10" y="111" width="300" height="5"/>
+                    <rect key="frame" x="10" y="114" width="300" height="5"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </box>
-                <scrollView identifier="TxtField" fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="light" findBarPosition="belowContent" translatesAutoresizingMaskIntoConstraints="NO" id="xvu-sS-ysR">
-                    <rect key="frame" x="10" y="149" width="300" height="85"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <clipView key="contentView" ambiguous="YES" id="VYr-XS-nMt">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="85"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView ambiguous="YES" importsGraphics="NO" usesFontPanel="YES" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dataDetection="YES" dashSubstitution="YES" smartInsertDelete="YES" id="dd4-ij-89g" customClass="QuietTextField" customModule="InoJournal" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="85"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <size key="minSize" width="300" height="85"/>
-                                <size key="maxSize" width="463" height="10000000"/>
-                                <color key="insertionPointColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                            </textView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.24458033376963351" green="0.23447140134761379" blue="0.23001027388680823" alpha="1" colorSpace="calibratedRGB"/>
-                    </clipView>
-                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="MZa-BX-5Yk">
-                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </scroller>
-                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" controlSize="mini" horizontal="NO" id="jwZ-Nk-aVg" customClass="QuietScroller" customModule="InoJournal" customModuleProvider="target">
-                        <rect key="frame" x="289" y="0.0" width="11" height="85"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </scroller>
-                    <connections>
-                        <outlet property="nextKeyView" destination="gE3-VT-BQx" id="AXy-ly-EfJ"/>
-                    </connections>
-                </scrollView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdH-Ws-6YO">
-                    <rect key="frame" x="10" y="43" width="300" height="62"/>
+                    <rect key="frame" x="10" y="42" width="300" height="66"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="this is me" id="HeW-H0-cL0">
                         <font key="font" metaFont="cellTitle"/>
@@ -65,7 +35,7 @@
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1CT-ig-e69" userLabel="Quit Button">
-                    <rect key="frame" x="240" y="7" width="72" height="32"/>
+                    <rect key="frame" x="240" y="6" width="72" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSStopProgressFreestandingTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gQ9-9W-da2">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -76,7 +46,7 @@
                     </connections>
                 </button>
                 <button identifier="SaveTxtBtn" toolTip="Save" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gE3-VT-BQx">
-                    <rect key="frame" x="240" y="115" width="76" height="32"/>
+                    <rect key="frame" x="240" y="123" width="76" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="vSz-Vu-fSN">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -89,30 +59,56 @@ DQ
                         <action selector="saveEntry:" target="-2" id="qFQ-0I-1WQ"/>
                     </connections>
                 </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eFG-sS-w0w" userLabel="Prev Button">
-                    <rect key="frame" x="8" y="7" width="70" height="32"/>
+                <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MXw-af-pfE">
+                    <rect key="frame" x="8" y="11" width="87" height="24"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSGoLeftTemplate" imagePosition="only" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZKK-sd-dK3">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="momentary" id="SJs-Ap-TiB">
                         <font key="font" metaFont="system"/>
-                    </buttonCell>
+                        <segments>
+                            <segment image="NSGoLeftTemplate" width="40">
+                                <nil key="label"/>
+                            </segment>
+                            <segment image="NSGoRightTemplate" width="40" tag="1">
+                                <nil key="label"/>
+                            </segment>
+                        </segments>
+                    </segmentedCell>
                     <connections>
-                        <action selector="goLeft:" target="-2" id="6MS-IY-cHU"/>
+                        <action selector="navigate:" target="-2" id="eJg-3D-CtM"/>
                     </connections>
-                </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gew-2R-76u" userLabel="Next Button">
-                    <rect key="frame" x="68" y="7" width="70" height="32"/>
+                </segmentedControl>
+                <scrollView identifier="TxtField" fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="light" findBarPosition="belowContent" translatesAutoresizingMaskIntoConstraints="NO" id="xvu-sS-ysR" customClass="QuietScrollView" customModule="InoJournal" customModuleProvider="target">
+                    <rect key="frame" x="10" y="164" width="300" height="86"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSGoRightTemplate" imagePosition="only" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XT0-bG-FWf" userLabel="Button Cell">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
+                    <clipView key="contentView" ambiguous="YES" id="VYr-XS-nMt">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="86"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView ambiguous="YES" importsGraphics="NO" usesFontPanel="YES" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dataDetection="YES" dashSubstitution="YES" smartInsertDelete="YES" id="dd4-ij-89g" customClass="QuietTextField" customModule="InoJournal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="86"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <size key="minSize" width="300" height="86"/>
+                                <size key="maxSize" width="463" height="10000000"/>
+                                <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            </textView>
+                        </subviews>
+                    </clipView>
+                    <edgeInsets key="contentInsets" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                    <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="MZa-BX-5Yk">
+                        <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" controlSize="mini" horizontal="NO" id="jwZ-Nk-aVg" customClass="QuietScroller" customModule="InoJournal" customModuleProvider="target">
+                        <rect key="frame" x="294" y="0.0" width="11" height="77"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
                     <connections>
-                        <action selector="goRight:" target="-2" id="bdJ-xv-fhE"/>
+                        <outlet property="nextKeyView" destination="gE3-VT-BQx" id="AXy-ly-EfJ"/>
                     </connections>
-                </button>
+                </scrollView>
             </subviews>
-            <point key="canvasLocation" x="132" y="148.5"/>
+            <point key="canvasLocation" x="132" y="148"/>
         </customView>
     </objects>
     <resources>

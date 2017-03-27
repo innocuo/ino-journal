@@ -11,9 +11,8 @@ import Cocoa
 class QuietScroller: NSScroller {
     
     override func draw(_ dirtyRect: NSRect) {
-        NSColor(red:0, green:0, blue: 0, alpha:0.5).set()
-        NSRectFill(self.bounds)
+        NSColor(red:0, green:0, blue: 0, alpha:0.2).set()
         super.draw(dirtyRect)
-    }    
+    }
 }
 

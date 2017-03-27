@@ -25,6 +25,7 @@
 		9F890D3E1E7F1E9800F46B0A /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D3D1E7F1E9800F46B0A /* DBManager.swift */; };
 		9FA6A5751E8605A90037D9BF /* QuietScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6A5741E8605A90037D9BF /* QuietScroller.swift */; };
 		9FE0E4641E86D3E700BB6A7B /* JournalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE0E4631E86D3E700BB6A7B /* JournalNotification.swift */; };
+		9FFE83DA1E89D1170007666B /* QuietScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFE83D91E89D1170007666B /* QuietScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		9F890D3D1E7F1E9800F46B0A /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		9FA6A5741E8605A90037D9BF /* QuietScroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuietScroller.swift; sourceTree = "<group>"; };
 		9FE0E4631E86D3E700BB6A7B /* JournalNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalNotification.swift; sourceTree = "<group>"; };
+		9FFE83D91E89D1170007666B /* QuietScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuietScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				9F890D2C1E7EEB1900F46B0A /* Quote.swift */,
 				9F890D2E1E7EEB3800F46B0A /* EventMonitor.swift */,
 				9F890D301E7EEC5000F46B0A /* JournalViewController.swift */,
+				9FFE83D91E89D1170007666B /* QuietScrollView.swift */,
 				9F890D321E7EEE5900F46B0A /* QuietTextField.swift */,
 				9F890D341E7EEF4700F46B0A /* HotKey.swift */,
 				9F890D3D1E7F1E9800F46B0A /* DBManager.swift */,
@@ -325,6 +328,7 @@
 			files = (
 				9F890CFE1E7EE90500F46B0A /* ViewController.swift in Sources */,
 				9F890D2D1E7EEB1900F46B0A /* Quote.swift in Sources */,
+				9FFE83DA1E89D1170007666B /* QuietScrollView.swift in Sources */,
 				9F890D331E7EEE5900F46B0A /* QuietTextField.swift in Sources */,
 				9F890D3E1E7F1E9800F46B0A /* DBManager.swift in Sources */,
 				9F890CFC1E7EE90500F46B0A /* AppDelegate.swift in Sources */,

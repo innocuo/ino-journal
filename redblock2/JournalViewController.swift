@@ -50,9 +50,11 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
         print ("view did load")
         
         textField.delegate = self
-        textField.textColor = NSColor(red: 209/255, green: 209/255, blue: 209/255, alpha: 1)
-        textField.textContainerInset = NSSize(width:10, height: 10)
+        //textField.textColor = NSColor(red: 209/255, green: 209/255, blue: 209/255, alpha: 1)
+      //  textField.textContainerInset = NSSize(width:5, height: 5)
         textField.becomeFirstResponder()
+        
+        
     }
     
     
@@ -132,18 +134,23 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
 }
 
 extension JournalViewController{
-    @IBAction func goLeft(_ sender: NSButton){
+    @IBAction func navigate(_ sender: NSSegmentedControl){
+        
+        var dir:Int;
+       
         do{
             let count = try self.dbmanager!.getEntriesCount()
-        currentQuoteIndex = (currentQuoteIndex-1+count)%count
-        }catch{
-            currentQuoteIndex = 0
-        }
-    }
-    @IBAction func goRight(_ sender: NSButton){
-        do{
-            let count = try self.dbmanager!.getEntriesCount()
-            currentQuoteIndex = (currentQuoteIndex+1)%count
+            
+            switch sender.selectedSegment{
+            case 0:
+                dir = -1+count
+                break
+            //case 1:
+            default:
+                dir = 1
+                break
+            }
+            currentQuoteIndex = (currentQuoteIndex+dir)%count
         }catch{
             currentQuoteIndex = 0
         }
@@ -159,7 +166,7 @@ extension JournalViewController{
 
 class JournalBackground:NSView{
     override func draw(_ dirtyRect:NSRect){
-        NSColor.white.set()
+        NSColor(red: 240/255, green: 240/255, blue: 243/255, alpha: 1.0).set()
         NSRectFill(self.bounds)
     }
 }
