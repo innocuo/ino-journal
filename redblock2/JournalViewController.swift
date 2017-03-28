@@ -12,6 +12,7 @@ import SQLite
 class JournalViewController: NSViewController, NSTextViewDelegate{
     
     @IBOutlet var textLabel:NSTextField!
+    @IBOutlet var textCount:NSTextField!
     @IBOutlet var textField:NSTextView!
     @IBOutlet var saveBtn:NSButton!
     @IBOutlet var scrollable:NSScrollView!
@@ -51,10 +52,9 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
         
         textField.delegate = self
         //textField.textColor = NSColor(red: 209/255, green: 209/255, blue: 209/255, alpha: 1)
-      //  textField.textContainerInset = NSSize(width:5, height: 5)
+        textField.textContainerInset = NSSize(width:7, height: 0)
         textField.becomeFirstResponder()
-        
-        
+    
     }
     
     
@@ -80,8 +80,9 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
             let timestamp:Int64 = Int64(Date().timeIntervalSince1970)
             let id: Int64 = try dbmanager!.addEntry( qtext:str, qdate: timestamp )
             if(id > 0){
-                textField.textStorage?.setAttributedString(NSAttributedString(string: ""))
-                
+                //textField.textStorage?.setAttributedString(NSAttributedString(string: ""))
+                textField.string = ""
+                textCount.stringValue = "0"
                 JournalNotification.shared.send("InoJournal", informativeText: "New entry saved: " + str)
                 self.delegate!.closePopover(self)            }
         }catch{
@@ -122,10 +123,18 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
         return false
     }
     
+    //from NSTextViewDelegate
+    func textDidChange(_ notification: Notification) {
+        let count = textField.string!.characters.count
+        textCount.stringValue = "\( count )"
+    }
     
+    
+    //press the ESC key to close the panel
     override func cancelOperation(_ sender: Any?) {
         
-        textField.textStorage?.setAttributedString(NSAttributedString(string: ""))
+        textField.string = ""
+        textCount.stringValue = "0"
         self.delegate!.closePopover(self)
     }
     
@@ -166,7 +175,7 @@ extension JournalViewController{
 
 class JournalBackground:NSView{
     override func draw(_ dirtyRect:NSRect){
-        NSColor(red: 240/255, green: 240/255, blue: 243/255, alpha: 1.0).set()
+        NSColor(red: 238/255, green: 236/255, blue: 229/255, alpha: 1.0).set()
         NSRectFill(self.bounds)
     }
 }

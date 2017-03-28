@@ -10,6 +10,7 @@
             <connections>
                 <outlet property="saveBtn" destination="gE3-VT-BQx" id="VMs-Xg-VMq"/>
                 <outlet property="scrollable" destination="xvu-sS-ysR" id="hqd-Xk-Xb4"/>
+                <outlet property="textCount" destination="XV6-dT-fC9" id="vbB-wj-YME"/>
                 <outlet property="textField" destination="dd4-ij-89g" id="nM1-d5-ZMd"/>
                 <outlet property="textLabel" destination="mdH-Ws-6YO" id="WDe-lf-ahp"/>
                 <outlet property="view" destination="c22-O7-iKe" id="cFS-1M-YUg"/>
@@ -21,12 +22,23 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="260"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <box focusRingType="none" appearanceType="aqua" verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="Ebq-VO-3Vn">
-                    <rect key="frame" x="10" y="114" width="300" height="5"/>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eig-cZ-Ifj" customClass="SimpleRectangle" customModule="InoJournal" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="116" width="320" height="134"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                </box>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XV6-dT-fC9">
+                            <rect key="frame" x="10" y="11" width="73" height="16"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="000" id="Wm7-Er-8sZ">
+                                <font key="font" metaFont="cellTitle"/>
+                                <color key="textColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                </customView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdH-Ws-6YO">
-                    <rect key="frame" x="10" y="42" width="300" height="66"/>
+                    <rect key="frame" x="10" y="39" width="300" height="66"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="this is me" id="HeW-H0-cL0">
                         <font key="font" metaFont="cellTitle"/>
@@ -46,7 +58,7 @@
                     </connections>
                 </button>
                 <button identifier="SaveTxtBtn" toolTip="Save" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gE3-VT-BQx">
-                    <rect key="frame" x="240" y="123" width="76" height="32"/>
+                    <rect key="frame" x="240" y="119" width="76" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="vSz-Vu-fSN">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -78,17 +90,17 @@ DQ
                     </connections>
                 </segmentedControl>
                 <scrollView identifier="TxtField" fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="light" findBarPosition="belowContent" translatesAutoresizingMaskIntoConstraints="NO" id="xvu-sS-ysR" customClass="QuietScrollView" customModule="InoJournal" customModuleProvider="target">
-                    <rect key="frame" x="10" y="164" width="300" height="86"/>
+                    <rect key="frame" x="0.0" y="155" width="320" height="85"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <clipView key="contentView" ambiguous="YES" id="VYr-XS-nMt">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="86"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView ambiguous="YES" importsGraphics="NO" usesFontPanel="YES" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dataDetection="YES" dashSubstitution="YES" smartInsertDelete="YES" id="dd4-ij-89g" customClass="QuietTextField" customModule="InoJournal" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="300" height="86"/>
+                            <textView ambiguous="YES" importsGraphics="NO" richText="NO" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dataDetection="YES" dashSubstitution="YES" smartInsertDelete="YES" id="dd4-ij-89g" customClass="QuietTextField" customModule="InoJournal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <size key="minSize" width="300" height="86"/>
+                                <size key="minSize" width="320" height="85"/>
                                 <size key="maxSize" width="463" height="10000000"/>
                                 <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             </textView>
@@ -100,7 +112,7 @@ DQ
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" controlSize="mini" horizontal="NO" id="jwZ-Nk-aVg" customClass="QuietScroller" customModule="InoJournal" customModuleProvider="target">
-                        <rect key="frame" x="294" y="0.0" width="11" height="77"/>
+                        <rect key="frame" x="-11" y="0.0" width="11" height="0.0"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <connections>
