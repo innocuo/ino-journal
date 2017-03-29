@@ -11,7 +11,8 @@ import SQLite
 
 class JournalViewController: NSViewController, NSTextViewDelegate{
     
-    @IBOutlet var textLabel:NSTextField!
+    @IBOutlet var displayedEntry:NSTextField!
+    @IBOutlet var displayedDate:NSTextField!
     @IBOutlet var textCount:NSTextField!
     @IBOutlet var textField:NSTextView!
     @IBOutlet var saveBtn:NSButton!
@@ -97,7 +98,16 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
         do{
             let row = try dbmanager!.getEntry( currentDisplayedIndex )
             let entry = Expression<String>("entry")
-            textLabel.stringValue = row[entry]
+            let date = Expression<Int64>("date")
+            
+            let ts = row[ date ]
+            let realDate = Date(timeIntervalSince1970: TimeInterval(ts) )
+            
+            let dateFormat = DateFormatter()
+            dateFormat.dateFormat = "MMM dd YYYY - hh:mm a"
+            
+            displayedEntry.stringValue = row[entry]
+            displayedDate.stringValue = dateFormat.string(from: realDate)
         }catch{
             
         }
