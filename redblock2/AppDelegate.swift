@@ -105,11 +105,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func printQuote(_ sender:AnyObject){
     
-        let quoteText = "This is today"
-        let quoteAuthor = "Mark"
+        let quoteText = "This is useless"
         
-        print("\(quoteText) - \(quoteAuthor)")
-    
+        print("\(quoteText)")
         
         statusItem.button?.highlight(false)
         statusItem.menu = nil

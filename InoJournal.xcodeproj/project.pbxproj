@@ -14,7 +14,6 @@
 		9F890D0E1E7EE90500F46B0A /* redblock2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D0D1E7EE90500F46B0A /* redblock2Tests.swift */; };
 		9F890D191E7EE90500F46B0A /* redblock2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D181E7EE90500F46B0A /* redblock2UITests.swift */; };
 		9F890D2B1E7EE9BC00F46B0A /* JournalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F890D2A1E7EE9BC00F46B0A /* JournalViewController.xib */; };
-		9F890D2D1E7EEB1900F46B0A /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D2C1E7EEB1900F46B0A /* Quote.swift */; };
 		9F890D2F1E7EEB3800F46B0A /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D2E1E7EEB3800F46B0A /* EventMonitor.swift */; };
 		9F890D311E7EEC5000F46B0A /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D301E7EEC5000F46B0A /* JournalViewController.swift */; };
 		9F890D331E7EEE5900F46B0A /* QuietTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D321E7EEE5900F46B0A /* QuietTextField.swift */; };
@@ -84,7 +83,6 @@
 		9F890D181E7EE90500F46B0A /* redblock2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = redblock2UITests.swift; sourceTree = "<group>"; };
 		9F890D1A1E7EE90500F46B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F890D2A1E7EE9BC00F46B0A /* JournalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JournalViewController.xib; sourceTree = "<group>"; };
-		9F890D2C1E7EEB1900F46B0A /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		9F890D2E1E7EEB3800F46B0A /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		9F890D301E7EEC5000F46B0A /* JournalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
 		9F890D321E7EEE5900F46B0A /* QuietTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuietTextField.swift; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 				9F890D041E7EE90500F46B0A /* Info.plist */,
 				9F890D2A1E7EE9BC00F46B0A /* JournalViewController.xib */,
 				9FFE83DB1E89F4C50007666B /* SimpleRectangle.swift */,
-				9F890D2C1E7EEB1900F46B0A /* Quote.swift */,
 				9F890D2E1E7EEB3800F46B0A /* EventMonitor.swift */,
 				9F890D301E7EEC5000F46B0A /* JournalViewController.swift */,
 				9FFE83D91E89D1170007666B /* QuietScrollView.swift */,
@@ -330,7 +327,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F890CFE1E7EE90500F46B0A /* ViewController.swift in Sources */,
-				9F890D2D1E7EEB1900F46B0A /* Quote.swift in Sources */,
 				9FFE83DA1E89D1170007666B /* QuietScrollView.swift in Sources */,
 				9F890D331E7EEE5900F46B0A /* QuietTextField.swift in Sources */,
 				9F890D3E1E7F1E9800F46B0A /* DBManager.swift in Sources */,

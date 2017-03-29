@@ -22,9 +22,9 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
     private var backgroundView:JournalBackground?
     private var delegate:AppDelegate?
     
-    var currentQuoteIndex: Int = 0{
+    var currentDisplayedIndex: Int = 0{
         didSet{
-            updateQuote()
+            updateDisplayedEntry()
         }
     }
     
@@ -41,7 +41,7 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
             }
         }
         
-        currentQuoteIndex = 0
+        currentDisplayedIndex = 0
     }
     
     override func viewDidLoad() {
@@ -92,10 +92,10 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
 
 
     
-    func updateQuote(){
+    func updateDisplayedEntry(){
         
         do{
-            let row = try dbmanager!.getEntry( currentQuoteIndex )
+            let row = try dbmanager!.getEntry( currentDisplayedIndex )
             let entry = Expression<String>("entry")
             textLabel.stringValue = row[entry]
         }catch{
@@ -159,9 +159,9 @@ extension JournalViewController{
                 dir = 1
                 break
             }
-            currentQuoteIndex = (currentQuoteIndex+dir)%count
+            currentDisplayedIndex = (currentDisplayedIndex+dir)%count
         }catch{
-            currentQuoteIndex = 0
+            currentDisplayedIndex = 0
         }
     }
     @IBAction func quit(_ sender: NSButton){
