@@ -65,6 +65,8 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
        
         //this is necessary for when you use the hotkey,
         //otherwise it doesn't focus on the text field
+        //Also needed so clicks outside the app trigger events to
+        //close the popover
         NSApp.activate(ignoringOtherApps: true)
         
         self.view.window!.makeFirstResponder(textField)
