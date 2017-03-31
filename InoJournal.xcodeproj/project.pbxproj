@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F4AA5FD1E8DFA5C0007F889 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4AA5FC1E8DFA5C0007F889 /* SQLite.framework */; };
+		9F4AA5FE1E8DFA5C0007F889 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4AA5FC1E8DFA5C0007F889 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F4AA6071E8DFAE30007F889 /* SQLite.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9F4AA6061E8DFAE30007F889 /* SQLite.framework.dSYM */; };
 		9F890CFC1E7EE90500F46B0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890CFB1E7EE90500F46B0A /* AppDelegate.swift */; };
 		9F890CFE1E7EE90500F46B0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890CFD1E7EE90500F46B0A /* ViewController.swift */; };
 		9F890D001E7EE90500F46B0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F890CFF1E7EE90500F46B0A /* Assets.xcassets */; };
@@ -18,9 +21,6 @@
 		9F890D311E7EEC5000F46B0A /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D301E7EEC5000F46B0A /* JournalViewController.swift */; };
 		9F890D331E7EEE5900F46B0A /* QuietTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D321E7EEE5900F46B0A /* QuietTextField.swift */; };
 		9F890D351E7EEF4700F46B0A /* HotKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D341E7EEF4700F46B0A /* HotKey.swift */; };
-		9F890D371E7F1D8600F46B0A /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F890D361E7F1D8600F46B0A /* SQLite.framework */; };
-		9F890D381E7F1D8600F46B0A /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F890D361E7F1D8600F46B0A /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9F890D3C1E7F1DE500F46B0A /* SQLite.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9F890D3B1E7F1DE500F46B0A /* SQLite.framework.dSYM */; };
 		9F890D3E1E7F1E9800F46B0A /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D3D1E7F1E9800F46B0A /* DBManager.swift */; };
 		9FA6A5751E8605A90037D9BF /* QuietScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6A5741E8605A90037D9BF /* QuietScroller.swift */; };
 		9FE0E4641E86D3E700BB6A7B /* JournalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE0E4631E86D3E700BB6A7B /* JournalNotification.swift */; };
@@ -46,13 +46,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		9F890D391E7F1D8700F46B0A /* Embed Frameworks */ = {
+		9F4AA5FF1E8DFA5C0007F889 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9F890D381E7F1D8600F46B0A /* SQLite.framework in Embed Frameworks */,
+				9F4AA5FE1E8DFA5C0007F889 /* SQLite.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,13 +63,15 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				9F890D3C1E7F1DE500F46B0A /* SQLite.framework.dSYM in CopyFiles */,
+				9F4AA6071E8DFAE30007F889 /* SQLite.framework.dSYM in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9F4AA5FC1E8DFA5C0007F889 /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Carthage/Build/Mac/SQLite.framework; sourceTree = "<group>"; };
+		9F4AA6061E8DFAE30007F889 /* SQLite.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SQLite.framework.dSYM; path = Carthage/Build/Mac/SQLite.framework.dSYM; sourceTree = "<group>"; };
 		9F890CF81E7EE90500F46B0A /* InoJournal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InoJournal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F890CFB1E7EE90500F46B0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F890CFD1E7EE90500F46B0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,8 +89,6 @@
 		9F890D301E7EEC5000F46B0A /* JournalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
 		9F890D321E7EEE5900F46B0A /* QuietTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuietTextField.swift; sourceTree = "<group>"; };
 		9F890D341E7EEF4700F46B0A /* HotKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotKey.swift; sourceTree = "<group>"; };
-		9F890D361E7F1D8600F46B0A /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SQLite.framework; sourceTree = "<group>"; };
-		9F890D3B1E7F1DE500F46B0A /* SQLite.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = SQLite.framework.dSYM; sourceTree = "<group>"; };
 		9F890D3D1E7F1E9800F46B0A /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		9FA6A5741E8605A90037D9BF /* QuietScroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuietScroller.swift; sourceTree = "<group>"; };
 		9FE0E4631E86D3E700BB6A7B /* JournalNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalNotification.swift; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F890D371E7F1D8600F46B0A /* SQLite.framework in Frameworks */,
+				9F4AA5FD1E8DFA5C0007F889 /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,8 +125,8 @@
 		9F890CEF1E7EE90500F46B0A = {
 			isa = PBXGroup;
 			children = (
-				9F890D3B1E7F1DE500F46B0A /* SQLite.framework.dSYM */,
-				9F890D361E7F1D8600F46B0A /* SQLite.framework */,
+				9F4AA6061E8DFAE30007F889 /* SQLite.framework.dSYM */,
+				9F4AA5FC1E8DFA5C0007F889 /* SQLite.framework */,
 				9F890CFA1E7EE90500F46B0A /* InoJournal */,
 				9F890D0C1E7EE90500F46B0A /* InoJournalTests */,
 				9F890D171E7EE90500F46B0A /* InoJournalUITests */,
@@ -197,8 +197,8 @@
 				9F890CF41E7EE90500F46B0A /* Sources */,
 				9F890CF51E7EE90500F46B0A /* Frameworks */,
 				9F890CF61E7EE90500F46B0A /* Resources */,
-				9F890D391E7F1D8700F46B0A /* Embed Frameworks */,
 				9F890D3A1E7F1DC000F46B0A /* CopyFiles */,
+				9F4AA5FF1E8DFA5C0007F889 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -482,6 +482,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				INFOPLIST_FILE = redblock2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -500,6 +501,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				INFOPLIST_FILE = redblock2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
