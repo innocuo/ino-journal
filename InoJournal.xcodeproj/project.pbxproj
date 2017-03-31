@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F4AA5FD1E8DFA5C0007F889 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4AA5FC1E8DFA5C0007F889 /* SQLite.framework */; };
+		9F4AA5FE1E8DFA5C0007F889 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4AA5FC1E8DFA5C0007F889 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F4AA6071E8DFAE30007F889 /* SQLite.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9F4AA6061E8DFAE30007F889 /* SQLite.framework.dSYM */; };
 		9F890CFC1E7EE90500F46B0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890CFB1E7EE90500F46B0A /* AppDelegate.swift */; };
 		9F890CFE1E7EE90500F46B0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890CFD1E7EE90500F46B0A /* ViewController.swift */; };
 		9F890D001E7EE90500F46B0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F890CFF1E7EE90500F46B0A /* Assets.xcassets */; };
@@ -43,18 +46,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		9F4AA5FF1E8DFA5C0007F889 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9F4AA5FE1E8DFA5C0007F889 /* SQLite.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9F890D3A1E7F1DC000F46B0A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				9F4AA6071E8DFAE30007F889 /* SQLite.framework.dSYM in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9F4AA5FC1E8DFA5C0007F889 /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Carthage/Build/Mac/SQLite.framework; sourceTree = "<group>"; };
+		9F4AA6061E8DFAE30007F889 /* SQLite.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SQLite.framework.dSYM; path = Carthage/Build/Mac/SQLite.framework.dSYM; sourceTree = "<group>"; };
 		9F890CF81E7EE90500F46B0A /* InoJournal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InoJournal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F890CFB1E7EE90500F46B0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F890CFD1E7EE90500F46B0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F4AA5FD1E8DFA5C0007F889 /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +125,8 @@
 		9F890CEF1E7EE90500F46B0A = {
 			isa = PBXGroup;
 			children = (
+				9F4AA6061E8DFAE30007F889 /* SQLite.framework.dSYM */,
+				9F4AA5FC1E8DFA5C0007F889 /* SQLite.framework */,
 				9F890CFA1E7EE90500F46B0A /* InoJournal */,
 				9F890D0C1E7EE90500F46B0A /* InoJournalTests */,
 				9F890D171E7EE90500F46B0A /* InoJournalUITests */,
@@ -178,6 +198,7 @@
 				9F890CF51E7EE90500F46B0A /* Frameworks */,
 				9F890CF61E7EE90500F46B0A /* Resources */,
 				9F890D3A1E7F1DC000F46B0A /* CopyFiles */,
+				9F4AA5FF1E8DFA5C0007F889 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -461,6 +482,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				INFOPLIST_FILE = redblock2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -479,6 +501,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				INFOPLIST_FILE = redblock2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
