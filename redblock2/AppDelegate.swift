@@ -14,7 +14,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     let statusItem = NSStatusBar.system().statusItem(withLength: NSSquareStatusItemLength)
     let popover = NSPopover()
-    let menu = NSMenu()
     
     private var button:NSStatusBarButton?
     
@@ -34,10 +33,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             
             self.button?.toolTip="InoJournal"
             
-            //track left and right clicks, each shows a different thing
-            self.button?.action = #selector(AppDelegate.handleAction(_:))
-            self.button?.sendAction(on: NSEventMask(rawValue: UInt64(Int((NSEventMask.rightMouseDown.rawValue | NSEventMask.rightMouseUp.rawValue)))))
-            
         }
         
         //this is the popup where you enter journal entries
@@ -46,14 +41,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         popover.contentViewController = journalView
         popover.animates = false
-        
-        //popover.appearance = NSAppearance(named: NSAppearanceNameVibrantLight)
-        //popover.behavior = NSPopoverBehavior.Transient
-        
-        //add menu items
-        menu.addItem(NSMenuItem(title: "Print Quote", action: #selector(AppDelegate.printQuote(_:)), keyEquivalent: "P"))
-        menu.addItem(NSMenuItem.separator())
-        menu.addItem(NSMenuItem(title: "Quit", action: #selector(AppDelegate.quitApp(_:)), keyEquivalent: "q"))
         
         //this is needed for when user clicks on another statusItem
         eventMonitor = EventMonitor(mask: [.rightMouseUp , .leftMouseUp]) { [unowned self] event in
@@ -85,32 +72,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             self.closePopover( self )
         }
         eventMonitor.stop()
-    }
-    
-    
-    func handleAction(_ sender:AnyObject){
-        
-        let event:NSEvent! = NSApp.currentEvent!
-        
-        //mouse up instead of down
-        //otherwise when you click on a menu, then you have to click twice to make
-        //the app react
-        if(event.type == .rightMouseUp){
-            closePopover(sender, false)
-            statusItem.popUpMenu(menu)
-        }
-        
-    }
-    
-    
-    func printQuote(_ sender:AnyObject){
-    
-        let quoteText = "This is useless"
-        
-        print("\(quoteText)")
-        
-        statusItem.button?.highlight(false)
-        statusItem.menu = nil
     }
     
     
@@ -170,7 +131,16 @@ extension NSStatusBarButton {
         //   self.rightMouseDown(event)
         //return
         //}
+        self.toggle( self.target as? AppDelegate)
+    }
+    
+    open override func rightMouseDown(with event: NSEvent) {
+        
+        self.toggle( self.target as? AppDelegate)
+    }
+    
+    func toggle(_ delegate:AppDelegate?){
         self.highlight(true)
-        (self.target as? AppDelegate)?.togglePopover(self)
+        delegate?.togglePopover(self)
     }
 }
