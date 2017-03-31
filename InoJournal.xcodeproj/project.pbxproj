@@ -18,9 +18,6 @@
 		9F890D311E7EEC5000F46B0A /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D301E7EEC5000F46B0A /* JournalViewController.swift */; };
 		9F890D331E7EEE5900F46B0A /* QuietTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D321E7EEE5900F46B0A /* QuietTextField.swift */; };
 		9F890D351E7EEF4700F46B0A /* HotKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D341E7EEF4700F46B0A /* HotKey.swift */; };
-		9F890D371E7F1D8600F46B0A /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F890D361E7F1D8600F46B0A /* SQLite.framework */; };
-		9F890D381E7F1D8600F46B0A /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F890D361E7F1D8600F46B0A /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9F890D3C1E7F1DE500F46B0A /* SQLite.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9F890D3B1E7F1DE500F46B0A /* SQLite.framework.dSYM */; };
 		9F890D3E1E7F1E9800F46B0A /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F890D3D1E7F1E9800F46B0A /* DBManager.swift */; };
 		9FA6A5751E8605A90037D9BF /* QuietScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA6A5741E8605A90037D9BF /* QuietScroller.swift */; };
 		9FE0E4641E86D3E700BB6A7B /* JournalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE0E4631E86D3E700BB6A7B /* JournalNotification.swift */; };
@@ -46,24 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		9F890D391E7F1D8700F46B0A /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				9F890D381E7F1D8600F46B0A /* SQLite.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9F890D3A1E7F1DC000F46B0A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				9F890D3C1E7F1DE500F46B0A /* SQLite.framework.dSYM in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,8 +72,6 @@
 		9F890D301E7EEC5000F46B0A /* JournalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
 		9F890D321E7EEE5900F46B0A /* QuietTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuietTextField.swift; sourceTree = "<group>"; };
 		9F890D341E7EEF4700F46B0A /* HotKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotKey.swift; sourceTree = "<group>"; };
-		9F890D361E7F1D8600F46B0A /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SQLite.framework; sourceTree = "<group>"; };
-		9F890D3B1E7F1DE500F46B0A /* SQLite.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = SQLite.framework.dSYM; sourceTree = "<group>"; };
 		9F890D3D1E7F1E9800F46B0A /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		9FA6A5741E8605A90037D9BF /* QuietScroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuietScroller.swift; sourceTree = "<group>"; };
 		9FE0E4631E86D3E700BB6A7B /* JournalNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalNotification.swift; sourceTree = "<group>"; };
@@ -101,7 +84,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F890D371E7F1D8600F46B0A /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,8 +107,6 @@
 		9F890CEF1E7EE90500F46B0A = {
 			isa = PBXGroup;
 			children = (
-				9F890D3B1E7F1DE500F46B0A /* SQLite.framework.dSYM */,
-				9F890D361E7F1D8600F46B0A /* SQLite.framework */,
 				9F890CFA1E7EE90500F46B0A /* InoJournal */,
 				9F890D0C1E7EE90500F46B0A /* InoJournalTests */,
 				9F890D171E7EE90500F46B0A /* InoJournalUITests */,
@@ -197,7 +177,6 @@
 				9F890CF41E7EE90500F46B0A /* Sources */,
 				9F890CF51E7EE90500F46B0A /* Frameworks */,
 				9F890CF61E7EE90500F46B0A /* Resources */,
-				9F890D391E7F1D8700F46B0A /* Embed Frameworks */,
 				9F890D3A1E7F1DC000F46B0A /* CopyFiles */,
 			);
 			buildRules = (
