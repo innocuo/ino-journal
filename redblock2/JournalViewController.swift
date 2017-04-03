@@ -20,6 +20,8 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
 
     let dbmanager = DbManager()
     
+    let settingsMenu:NSMenu = NSMenu()
+    
     private var backgroundView:JournalBackground?
     private var delegate:AppDelegate?
     
@@ -50,6 +52,8 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
         super.viewDidLoad()
         
         print ("view did load")
+        
+        settingsMenu.addItem(NSMenuItem(title: "Quit", action: #selector(AppDelegate.quitApp(_:)), keyEquivalent: "q"))
         
         textField.delegate = self
         //textField.textColor = NSColor(red: 209/255, green: 209/255, blue: 209/255, alpha: 1)
@@ -176,12 +180,17 @@ extension JournalViewController{
             currentDisplayedIndex = 0
         }
     }
-    @IBAction func quit(_ sender: NSButton){
-        NSApplication.shared().terminate(sender)
-    }
     
     @IBAction func saveEntry(_ sender:NSButton){
+        
         doSaveEntry()
+    }
+    
+    @IBAction func settings(_ sender: NSButton){
+        
+        if let event = NSApplication.shared().currentEvent {
+            NSMenu.popUpContextMenu( settingsMenu, with: event, for: sender)
+        }
     }
 }
 

@@ -24,31 +24,11 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eig-cZ-Ifj" customClass="SimpleRectangle" customModule="InoJournal" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="120" width="320" height="134"/>
+                    <rect key="frame" x="0.0" y="141" width="320" height="111"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <subviews>
-                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XV6-dT-fC9">
-                            <rect key="frame" x="10" y="11" width="73" height="16"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="000" id="Wm7-Er-8sZ">
-                                <font key="font" metaFont="cellTitle"/>
-                                <color key="textColor" name="knobColor" catalog="System" colorSpace="catalog"/>
-                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                            </textFieldCell>
-                        </textField>
-                    </subviews>
                 </customView>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JFk-4N-otN" userLabel="DisplayedDate">
-                    <rect key="frame" x="10" y="94" width="300" height="14"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <textFieldCell key="cell" controlSize="small" refusesFirstResponder="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="left" title="date" id="xGP-Pq-HVB">
-                        <font key="font" metaFont="smallSystem"/>
-                        <color key="textColor" red="0.24458033379999999" green="0.23447140129999999" blue="0.23001027390000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                    </textFieldCell>
-                </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdH-Ws-6YO" userLabel="DisplayedEntry">
-                    <rect key="frame" x="10" y="41" width="300" height="50"/>
+                    <rect key="frame" x="9" y="65" width="300" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" truncatesLastVisibleLine="YES" refusesFirstResponder="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="left" title="entry" id="HeW-H0-cL0">
                         <font key="font" metaFont="cellTitle"/>
@@ -56,19 +36,26 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1CT-ig-e69" userLabel="Quit Button">
-                    <rect key="frame" x="240" y="5" width="72" height="32"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JFk-4N-otN" userLabel="DisplayedDate">
+                    <rect key="frame" x="9" y="118" width="300" height="14"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSStopProgressFreestandingTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gQ9-9W-da2">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                    <connections>
-                        <action selector="quit:" target="-2" id="Txf-tD-A17"/>
-                    </connections>
-                </button>
+                    <textFieldCell key="cell" controlSize="small" refusesFirstResponder="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="left" title="date" id="xGP-Pq-HVB">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" red="0.24458033379999999" green="0.23447140129999999" blue="0.23001027390000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XV6-dT-fC9">
+                    <rect key="frame" x="10" y="150" width="73" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="left" title="000" id="Wm7-Er-8sZ">
+                        <font key="font" metaFont="cellTitle"/>
+                        <color key="textColor" name="knobColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
                 <button identifier="SaveTxtBtn" toolTip="Save" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gE3-VT-BQx">
-                    <rect key="frame" x="240" y="123" width="76" height="32"/>
+                    <rect key="frame" x="240" y="143" width="76" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="vSz-Vu-fSN">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -81,36 +68,18 @@ DQ
                         <action selector="saveEntry:" target="-2" id="qFQ-0I-1WQ"/>
                     </connections>
                 </button>
-                <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MXw-af-pfE">
-                    <rect key="frame" x="8" y="10" width="87" height="24"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="momentary" id="SJs-Ap-TiB">
-                        <font key="font" metaFont="system"/>
-                        <segments>
-                            <segment image="NSGoLeftTemplate" width="40">
-                                <nil key="label"/>
-                            </segment>
-                            <segment image="NSGoRightTemplate" width="40" tag="1">
-                                <nil key="label"/>
-                            </segment>
-                        </segments>
-                    </segmentedCell>
-                    <connections>
-                        <action selector="navigate:" target="-2" id="eJg-3D-CtM"/>
-                    </connections>
-                </segmentedControl>
                 <scrollView identifier="TxtField" fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="light" findBarPosition="belowContent" translatesAutoresizingMaskIntoConstraints="NO" id="xvu-sS-ysR" customClass="QuietScrollView" customModule="InoJournal" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="159" width="320" height="85"/>
+                    <rect key="frame" x="0.0" y="174" width="320" height="68"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <clipView key="contentView" ambiguous="YES" id="VYr-XS-nMt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView ambiguous="YES" importsGraphics="NO" richText="NO" continuousSpellChecking="YES" allowsUndo="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dataDetection="YES" dashSubstitution="YES" smartInsertDelete="YES" id="dd4-ij-89g" customClass="QuietTextField" customModule="InoJournal" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <size key="minSize" width="320" height="85"/>
+                                <size key="minSize" width="320" height="68"/>
                                 <size key="maxSize" width="463" height="10000000"/>
                                 <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             </textView>
@@ -129,13 +98,42 @@ DQ
                         <outlet property="nextKeyView" destination="gE3-VT-BQx" id="AXy-ly-EfJ"/>
                     </connections>
                 </scrollView>
+                <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MXw-af-pfE">
+                    <rect key="frame" x="9" y="11" width="87" height="24"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="momentary" id="SJs-Ap-TiB">
+                        <font key="font" metaFont="system"/>
+                        <segments>
+                            <segment image="NSGoLeftTemplate" width="40">
+                                <nil key="label"/>
+                            </segment>
+                            <segment image="NSGoRightTemplate" width="40" tag="1">
+                                <nil key="label"/>
+                            </segment>
+                        </segments>
+                    </segmentedCell>
+                    <connections>
+                        <action selector="navigate:" target="-2" id="eJg-3D-CtM"/>
+                    </connections>
+                </segmentedControl>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q8H-cr-Xgy">
+                    <rect key="frame" x="290" y="8" width="20" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSActionTemplate" imagePosition="above" alignment="center" refusesFirstResponder="YES" imageScaling="proportionallyDown" inset="2" id="c5q-r6-cF6">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="settings:" target="-2" id="3bA-NS-cXC"/>
+                    </connections>
+                </button>
             </subviews>
             <point key="canvasLocation" x="132" y="148"/>
         </customView>
     </objects>
     <resources>
+        <image name="NSActionTemplate" width="14" height="14"/>
         <image name="NSGoLeftTemplate" width="9" height="12"/>
         <image name="NSGoRightTemplate" width="9" height="12"/>
-        <image name="NSStopProgressFreestandingTemplate" width="14" height="14"/>
     </resources>
 </document>
