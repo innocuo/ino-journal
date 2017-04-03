@@ -83,13 +83,17 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
     func doSaveEntry(){
         
         let str:String = (textField.textStorage as NSAttributedString!).string
+        
+        if str.characters.count <= 0{
+            return
+        }
+        
         do{
             let timestamp:Int64 = Int64(Date().timeIntervalSince1970)
             let id: Int64 = try dbmanager!.addEntry( qtext:str, qdate: timestamp )
             if(id > 0){
                 //textField.textStorage?.setAttributedString(NSAttributedString(string: ""))
-                textField.string = ""
-                textCount.stringValue = "0"
+                resetTextField()
                 JournalNotification.shared.send("InoJournal", informativeText: "New entry saved: " + str)
                 self.delegate!.closePopover(self)            }
         }catch{
@@ -143,15 +147,26 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
     func textDidChange(_ notification: Notification) {
         let count = textField.string!.characters.count
         textCount.stringValue = "\( count )"
+        
+        if count>0 {
+            saveBtn.isEnabled = true
+        }else{
+            saveBtn.isEnabled = false
+        }
     }
     
     
     //press the ESC key to close the panel
     override func cancelOperation(_ sender: Any?) {
         
+        resetTextField()
+        self.delegate!.closePopover(self)
+    }
+    
+    func resetTextField(){
         textField.string = ""
         textCount.stringValue = "0"
-        self.delegate!.closePopover(self)
+        saveBtn.isEnabled = false
     }
     
     

@@ -57,7 +57,7 @@
                 <button identifier="SaveTxtBtn" toolTip="Save" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gE3-VT-BQx">
                     <rect key="frame" x="240" y="143" width="76" height="32"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="vSz-Vu-fSN">
+                    <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" inset="2" id="vSz-Vu-fSN">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                         <string key="keyEquivalent" base64-UTF8="YES">
