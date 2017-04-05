@@ -12,11 +12,12 @@ import SQLite
 class JournalViewController: NSViewController, NSTextViewDelegate{
     
     @IBOutlet var displayedEntry:NSTextField!
-    @IBOutlet var displayedDate:NSTextField!
-    @IBOutlet var textCount:NSTextField!
-    @IBOutlet var textField:NSTextView!
-    @IBOutlet var saveBtn:NSButton!
-    @IBOutlet var scrollable:NSScrollView!
+    @IBOutlet var displayedDate: NSTextField!
+    @IBOutlet var textCount: NSTextField!
+    @IBOutlet var textField: NSTextView!
+    @IBOutlet var saveBtn: NSButton!
+    @IBOutlet var scrollable: NSScrollView!
+    @IBOutlet var displayBG: SimpleRectangle! //bottom panel
 
     let dbmanager = DbManager()
     
@@ -56,6 +57,8 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
         print ("view did load")
         
         settingsMenu.addItem(NSMenuItem(title: "Quit", action: #selector(AppDelegate.quitApp(_:)), keyEquivalent: "q"))
+        
+        displayBG.updateColor(r: 240/255, g: 242/255, b: 238/255)
         
         textField.delegate = self
         //textField.textColor = NSColor(red: 209/255, green: 209/255, blue: 209/255, alpha: 1)
@@ -220,7 +223,7 @@ extension JournalViewController{
 
 class JournalBackground:NSView{
     override func draw(_ dirtyRect:NSRect){
-        NSColor(red: 238/255, green: 236/255, blue: 229/255, alpha: 1.0).set()
+        NSColor(red: 85/255, green: 205/255, blue: 240/255, alpha: 1.0).set()
         NSRectFill(self.bounds)
     }
 }

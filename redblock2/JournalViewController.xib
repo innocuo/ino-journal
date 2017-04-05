@@ -8,6 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="JournalViewController" customModule="InoJournal" customModuleProvider="target">
             <connections>
+                <outlet property="displayBG" destination="S97-2e-rJe" id="sHP-fh-vbq"/>
                 <outlet property="displayedDate" destination="JFk-4N-otN" id="7D8-1H-vyO"/>
                 <outlet property="displayedEntry" destination="mdH-Ws-6YO" id="YGw-bC-w0t"/>
                 <outlet property="saveBtn" destination="gE3-VT-BQx" id="VMs-Xg-VMq"/>
@@ -23,8 +24,12 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="264"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eig-cZ-Ifj" customClass="SimpleRectangle" customModule="InoJournal" customModuleProvider="target">
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eig-cZ-Ifj" userLabel="Entry Background" customClass="SimpleRectangle" customModule="InoJournal" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="141" width="320" height="111"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                </customView>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S97-2e-rJe" userLabel="Display Background" customClass="SimpleRectangle" customModule="InoJournal" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="142"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                 </customView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdH-Ws-6YO" userLabel="DisplayedEntry">
