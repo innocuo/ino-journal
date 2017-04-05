@@ -19,6 +19,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     var eventMonitor: EventMonitor!
     private var hotKey: HotKey?
+    
+    //MARK: Application
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         
@@ -59,14 +61,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSUserNotificationCenter.default.delegate = JournalNotification.shared
     }
     
+    
     //we should start event monitor only when the app is active,
     //otherwise it's always listening. Creepy af! :)
     func applicationWillBecomeActive(_ notification: Notification) {
+        
         eventMonitor.start()
     }
     
+    
     //this is needed when users ctrl+tab
     func applicationWillResignActive(_ notification: Notification) {
+        
         self.statusItem.button?.highlight(false)
         if self.popover.isShown{
             self.closePopover( self )
@@ -75,14 +81,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     
+    func applicationWillTerminate(_ notification: Notification) {
+        
+        if let hk = hotKey {hk.unregister()}
+    }
+    
+    
     func quitApp(_ sender:AnyObject?){
+        
         NSApplication.shared().terminate(self)
     }
     
-    
-    func applicationWillTerminate(_ notification: Notification) {
-        if let hk = hotKey {hk.unregister()}
-    }
     
     //convenience constructor to be called from other classes
     static func shared() -> AppDelegate
@@ -140,6 +149,7 @@ extension NSStatusBarButton {
     }
     
     func toggle(_ delegate:AppDelegate?){
+        
         self.highlight(true)
         delegate?.togglePopover(self)
     }

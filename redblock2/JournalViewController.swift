@@ -31,6 +31,8 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
         }
     }
     
+    //MARK: View
+    
     override func viewWillAppear() {
         super.viewWillAppear()
         
@@ -76,9 +78,23 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
         self.view.window!.makeFirstResponder(textField)
     }
     
+    
+    //press the ESC key to close the panel
+    override func cancelOperation(_ sender: Any?) {
+        
+        resetTextField()
+        self.delegate!.closePopover(self)
+    }
+    
+    
     func setDelegate(_ delegate:AppDelegate){
+        
         self.delegate = delegate
     }
+    
+    
+    //MARK: Entries
+    
     
     func doSaveEntry(){
         
@@ -102,7 +118,6 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
     }
 
 
-    
     func updateDisplayedEntry(){
         
         do{
@@ -122,6 +137,9 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
             
         }
     }
+    
+    //MARK: Text field
+    
     
     //from NSTextViewDelegate
     //self is added as delegate of the text field, so self will receive commands
@@ -143,8 +161,10 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
         return false
     }
     
+    
     //from NSTextViewDelegate
     func textDidChange(_ notification: Notification) {
+        
         let count = textField.string!.characters.count
         textCount.stringValue = "\( count )"
         
@@ -156,50 +176,39 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
     }
     
     
-    //press the ESC key to close the panel
-    override func cancelOperation(_ sender: Any?) {
-        
-        resetTextField()
-        self.delegate!.closePopover(self)
-    }
-    
     func resetTextField(){
+        
         textField.string = ""
         textCount.stringValue = "0"
         saveBtn.isEnabled = false
     }
-    
-    
-    //override func awakeFromNib() {}
 }
 
 extension JournalViewController{
+    
+    //use arrow buttons to display previous/next entries
     @IBAction func navigate(_ sender: NSSegmentedControl){
         
-        var dir:Int;
-       
         do{
+            
             let count = try self.dbmanager!.getEntriesCount()
             
-            switch sender.selectedSegment{
-            case 0:
-                dir = -1+count
-                break
-            //case 1:
-            default:
-                dir = 1
-                break
-            }
-            currentDisplayedIndex = (currentDisplayedIndex+dir)%count
+            //the next(forward) button actually shows older entries
+            let dir: Int = sender.selectedSegment == 0 ? -1 + count : 1;
+            currentDisplayedIndex = ( currentDisplayedIndex + dir ) % count
+            
         }catch{
+            
             currentDisplayedIndex = 0
         }
     }
+    
     
     @IBAction func saveEntry(_ sender:NSButton){
         
         doSaveEntry()
     }
+    
     
     @IBAction func settings(_ sender: NSButton){
         
