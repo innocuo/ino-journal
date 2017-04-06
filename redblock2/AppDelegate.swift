@@ -107,12 +107,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let button = statusItem.button{
             popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
             statusItem.button?.highlight(true)
+            
+            let img = NSImage(named: "StatusBarButtonImageOn")
+            img?.isTemplate = true
+            self.button?.image = img
         }
     }
     
     
     func closePopover(_ sender:AnyObject?, _ deactivate_button:Bool = true){
         
+        if button != nil{
+            let img = NSImage(named: "StatusBarButtonImage")
+            img?.isTemplate = true
+            self.button?.image = img
+        }
         popover.performClose(sender)
         if deactivate_button {
             self.statusItem.button?.highlight(false)
