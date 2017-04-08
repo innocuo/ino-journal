@@ -43,6 +43,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         popover.contentViewController = journalView
         popover.animates = false
+        //NSAppearance(named: <#T##String#>)
+        popover.appearance = NSAppearance( named: NSAppearanceNameAqua )
         
         //this is needed for when user clicks on another statusItem
         eventMonitor = EventMonitor(mask: [.rightMouseUp , .leftMouseUp]) { [unowned self] event in

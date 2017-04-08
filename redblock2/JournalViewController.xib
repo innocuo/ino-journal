@@ -125,7 +125,7 @@ DQ
                     <rect key="frame" x="290" y="8" width="20" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSActionTemplate" imagePosition="above" alignment="center" refusesFirstResponder="YES" imageScaling="proportionallyDown" inset="2" id="c5q-r6-cF6">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <behavior key="behavior" lightByContents="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
