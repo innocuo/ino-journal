@@ -16,8 +16,8 @@ class DbManager{
         print("db manager is going to init");
         
         do{
-            print("look for db path: " + DbManager.getDocumentsDirectory().appendingPathComponent( "db.sqlite3" ).absoluteString)
-            self.db =  try Connection(DbManager.getDocumentsDirectory().appendingPathComponent( "db.sqlite3" ).absoluteString)
+            print("look for db path: " + DbManager.getDocumentsDirectory().appendingPathComponent( "ino_journal.sqlite3" ).absoluteString)
+            self.db =  try Connection(DbManager.getDocumentsDirectory().appendingPathComponent( "ino_journal.sqlite3" ).absoluteString)
             print ("db inited")
             
             let entries = Table("entries")

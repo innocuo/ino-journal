@@ -122,6 +122,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F3C09161E9DA417004B8256 /* JournalView */ = {
+			isa = PBXGroup;
+			children = (
+				9F890D2A1E7EE9BC00F46B0A /* JournalViewController.xib */,
+				9F890D301E7EEC5000F46B0A /* JournalViewController.swift */,
+			);
+			name = JournalView;
+			sourceTree = "<group>";
+		};
 		9F890CEF1E7EE90500F46B0A = {
 			isa = PBXGroup;
 			children = (
@@ -147,15 +156,14 @@
 		9F890CFA1E7EE90500F46B0A /* InoJournal */ = {
 			isa = PBXGroup;
 			children = (
+				9F3C09161E9DA417004B8256 /* JournalView */,
 				9F890CFB1E7EE90500F46B0A /* AppDelegate.swift */,
 				9F890CFD1E7EE90500F46B0A /* ViewController.swift */,
 				9F890CFF1E7EE90500F46B0A /* Assets.xcassets */,
 				9F890D011E7EE90500F46B0A /* Main.storyboard */,
 				9F890D041E7EE90500F46B0A /* Info.plist */,
-				9F890D2A1E7EE9BC00F46B0A /* JournalViewController.xib */,
 				9FFE83DB1E89F4C50007666B /* SimpleRectangle.swift */,
 				9F890D2E1E7EEB3800F46B0A /* EventMonitor.swift */,
-				9F890D301E7EEC5000F46B0A /* JournalViewController.swift */,
 				9FFE83D91E89D1170007666B /* QuietScrollView.swift */,
 				9F890D321E7EEE5900F46B0A /* QuietTextField.swift */,
 				9F890D341E7EEF4700F46B0A /* HotKey.swift */,
