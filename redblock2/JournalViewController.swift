@@ -37,8 +37,6 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
     override func viewWillAppear() {
         super.viewWillAppear()
         
-        print ("view will appear")
-        
         if let frameView = self.view.window?.contentView?.superview {
             if backgroundView == nil {
                 backgroundView = JournalBackground(frame: frameView.bounds)
@@ -54,7 +52,7 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
         
         super.viewDidLoad()
         
-        print ("view did load")
+        Log.debug ("view loaded")
         
         settingsMenu.addItem(NSMenuItem(title: "Quit", action: #selector(AppDelegate.quitApp(_:)), keyEquivalent: "q"))
         

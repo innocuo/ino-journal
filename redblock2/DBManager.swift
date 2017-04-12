@@ -36,7 +36,8 @@ class DbManager{
             })
             
             #if DEBUG
-                self.db!.trace({ (a : String) in Log.error( a ) })
+                //display debug info from the sqlite framework
+                self.db!.trace({ (a : String) in Log.debug( a ) })
             #endif
 
         }catch{

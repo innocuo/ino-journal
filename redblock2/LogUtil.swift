@@ -34,6 +34,7 @@ class LogUtil{
             return [
                 .warn: modifiers,
                 .error: modifiers,
+                .event: modifiers,
                 .debug: modifiers
             ]
         }()
