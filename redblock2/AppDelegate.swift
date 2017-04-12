@@ -8,9 +8,8 @@
 
 import Cocoa
 import Carbon
-import Willow
 
-let log = Logger()
+var Log: LogUtil!
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -24,8 +23,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var hotKey: HotKey?
     
     //MARK: Application
-
+    
     func applicationDidFinishLaunching(_ notification: Notification) {
+        
+        Log = LogUtil()
         
         //create menu bar icon button
         self.button = statusItem.button!

@@ -10,6 +10,7 @@
 		9F3C09181E9DA949004B8256 /* Willow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3C09171E9DA949004B8256 /* Willow.framework */; };
 		9F3C09191E9DA949004B8256 /* Willow.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3C09171E9DA949004B8256 /* Willow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F3C091F1E9DA9CC004B8256 /* Willow.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9F3C091E1E9DA9CC004B8256 /* Willow.framework.dSYM */; };
+		9F3C09211E9DACD2004B8256 /* LogUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3C09201E9DACD2004B8256 /* LogUtil.swift */; };
 		9F4AA5FD1E8DFA5C0007F889 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4AA5FC1E8DFA5C0007F889 /* SQLite.framework */; };
 		9F4AA5FE1E8DFA5C0007F889 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4AA5FC1E8DFA5C0007F889 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F4AA6071E8DFAE30007F889 /* SQLite.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9F4AA6061E8DFAE30007F889 /* SQLite.framework.dSYM */; };
@@ -78,6 +79,7 @@
 		9F3C09171E9DA949004B8256 /* Willow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Willow.framework; path = Carthage/Build/Mac/Willow.framework; sourceTree = "<group>"; };
 		9F3C091B1E9DA953004B8256 /* Willow.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Willow.framework.dSYM; path = Carthage/Build/Mac/Willow.framework.dSYM; sourceTree = "<group>"; };
 		9F3C091E1E9DA9CC004B8256 /* Willow.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Willow.framework.dSYM; path = Carthage/Build/Mac/Willow.framework.dSYM; sourceTree = "<group>"; };
+		9F3C09201E9DACD2004B8256 /* LogUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogUtil.swift; sourceTree = "<group>"; };
 		9F4AA5FC1E8DFA5C0007F889 /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Carthage/Build/Mac/SQLite.framework; sourceTree = "<group>"; };
 		9F4AA6061E8DFAE30007F889 /* SQLite.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SQLite.framework.dSYM; path = Carthage/Build/Mac/SQLite.framework.dSYM; sourceTree = "<group>"; };
 		9F890CF81E7EE90500F46B0A /* InoJournal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InoJournal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +192,7 @@
 				9F890D3D1E7F1E9800F46B0A /* DBManager.swift */,
 				9FA6A5741E8605A90037D9BF /* QuietScroller.swift */,
 				9FE0E4631E86D3E700BB6A7B /* JournalNotification.swift */,
+				9F3C09201E9DACD2004B8256 /* LogUtil.swift */,
 			);
 			name = InoJournal;
 			path = redblock2;
@@ -361,6 +364,7 @@
 				9F890CFC1E7EE90500F46B0A /* AppDelegate.swift in Sources */,
 				9FA6A5751E8605A90037D9BF /* QuietScroller.swift in Sources */,
 				9FFE83DC1E89F4C50007666B /* SimpleRectangle.swift in Sources */,
+				9F3C09211E9DACD2004B8256 /* LogUtil.swift in Sources */,
 				9F890D311E7EEC5000F46B0A /* JournalViewController.swift in Sources */,
 				9F890D2F1E7EEB3800F46B0A /* EventMonitor.swift in Sources */,
 				9FE0E4641E86D3E700BB6A7B /* JournalNotification.swift in Sources */,
