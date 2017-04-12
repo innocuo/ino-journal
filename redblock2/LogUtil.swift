@@ -15,7 +15,7 @@ class LogUtil{
     private struct PrefixModifier: LogMessageModifier {
         
         func modifyMessage(_ message: String, with: LogLevel) -> String {
-            return message
+            return "[\(with.description)] \(message)"
         }
     }
     
@@ -49,7 +49,7 @@ class LogUtil{
        
         let filename =  (file as NSString).lastPathComponent
         
-        return "\(filename):\(line) \(function): \(message)"
+        return "\(message) | \(filename):\(line) \(function)"
     }
     
     func debug(_ message: String, _ file: String = #file, _ function: String = #function, _ line: Int = #line){
