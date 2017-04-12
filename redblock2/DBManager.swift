@@ -11,16 +11,19 @@ import SQLite
 class DbManager{
     
     let db : Connection?
+    
+    static let fileName : String = "ino_journal.sqlite3"
+    static let table : String = "entries"
    
     init?(){
         print("db manager is going to init");
         
         do{
-            print("look for db path: " + DbManager.getDocumentsDirectory().appendingPathComponent( "ino_journal.sqlite3" ).absoluteString)
-            self.db =  try Connection(DbManager.getDocumentsDirectory().appendingPathComponent( "ino_journal.sqlite3" ).absoluteString)
+            print("look for db path: " + DbManager.getDocumentsDirectory().appendingPathComponent( DbManager.fileName ).absoluteString)
+            self.db =  try Connection(DbManager.getDocumentsDirectory().appendingPathComponent( DbManager.fileName ).absoluteString)
             print ("db inited")
             
-            let entries = Table("entries")
+            let entries = Table( DbManager.table )
             let id = Expression<Int64>("id")
             let entry = Expression<String>("entry")
             let date = Expression<Int64>("date")
@@ -44,7 +47,7 @@ class DbManager{
     
     func addEntry( qtext:String, qdate:Int64) throws -> Int64{
         
-        let entries = Table("entries")
+        let entries = Table( DbManager.table )
         let entry = Expression<String>("entry")
         let date = Expression<Int64>("date")
         
@@ -58,7 +61,7 @@ class DbManager{
     }
     
     func getEntry(_ qoffset:Int) throws -> Row{
-        let entries = Table("entries")
+        let entries = Table( DbManager.table )
         let date = Expression<Int64>("date")
         let query = entries.order(date.desc)
             .limit(1, offset: qoffset)
@@ -67,14 +70,15 @@ class DbManager{
     }
     
     func getEntriesCount() throws -> Int{
-        let entries = Table("entries")
+        let entries = Table( DbManager.table )
         return try self.db!.scalar(entries.count)
     }
     
     private class func getDocumentsDirectory() -> URL {
+        
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentsDirectory = paths[0]
-        print(documentsDirectory)
+
         return documentsDirectory
     }
 }
