@@ -8,6 +8,9 @@
 
 import Cocoa
 import Carbon
+import Willow
+
+let log = Logger()
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {

@@ -16,12 +16,12 @@ class DbManager{
     static let table : String = "entries"
    
     init?(){
-        print("db manager is going to init");
+        log.debug("db manager is going to init");
         
         do{
-            print("look for db path: " + DbManager.getDocumentsDirectory().appendingPathComponent( DbManager.fileName ).absoluteString)
+            log.debug("look for db path: " + DbManager.getDocumentsDirectory().appendingPathComponent( DbManager.fileName ).absoluteString)
             self.db =  try Connection(DbManager.getDocumentsDirectory().appendingPathComponent( DbManager.fileName ).absoluteString)
-            print ("db inited")
+            log.event ("db inited")
             
             let entries = Table( DbManager.table )
             let id = Expression<Int64>("id")
@@ -36,11 +36,11 @@ class DbManager{
             })
             
             #if DEBUG
-                self.db!.trace({ (a : String) in print( a ) })
+                self.db!.trace({ (a : String) in log.error( a ) })
             #endif
 
         }catch{
-            print ("error connecting to db")
+            log.error ("error connecting to db")
             return nil
         }
     }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F3C09181E9DA949004B8256 /* Willow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3C09171E9DA949004B8256 /* Willow.framework */; };
+		9F3C09191E9DA949004B8256 /* Willow.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3C09171E9DA949004B8256 /* Willow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F3C091F1E9DA9CC004B8256 /* Willow.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9F3C091E1E9DA9CC004B8256 /* Willow.framework.dSYM */; };
 		9F4AA5FD1E8DFA5C0007F889 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4AA5FC1E8DFA5C0007F889 /* SQLite.framework */; };
 		9F4AA5FE1E8DFA5C0007F889 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4AA5FC1E8DFA5C0007F889 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F4AA6071E8DFAE30007F889 /* SQLite.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9F4AA6061E8DFAE30007F889 /* SQLite.framework.dSYM */; };
@@ -52,6 +55,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				9F3C09191E9DA949004B8256 /* Willow.framework in Embed Frameworks */,
 				9F4AA5FE1E8DFA5C0007F889 /* SQLite.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -64,12 +68,16 @@
 			dstSubfolderSpec = 16;
 			files = (
 				9F4AA6071E8DFAE30007F889 /* SQLite.framework.dSYM in CopyFiles */,
+				9F3C091F1E9DA9CC004B8256 /* Willow.framework.dSYM in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9F3C09171E9DA949004B8256 /* Willow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Willow.framework; path = Carthage/Build/Mac/Willow.framework; sourceTree = "<group>"; };
+		9F3C091B1E9DA953004B8256 /* Willow.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Willow.framework.dSYM; path = Carthage/Build/Mac/Willow.framework.dSYM; sourceTree = "<group>"; };
+		9F3C091E1E9DA9CC004B8256 /* Willow.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Willow.framework.dSYM; path = Carthage/Build/Mac/Willow.framework.dSYM; sourceTree = "<group>"; };
 		9F4AA5FC1E8DFA5C0007F889 /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Carthage/Build/Mac/SQLite.framework; sourceTree = "<group>"; };
 		9F4AA6061E8DFAE30007F889 /* SQLite.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = SQLite.framework.dSYM; path = Carthage/Build/Mac/SQLite.framework.dSYM; sourceTree = "<group>"; };
 		9F890CF81E7EE90500F46B0A /* InoJournal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InoJournal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F3C09181E9DA949004B8256 /* Willow.framework in Frameworks */,
 				9F4AA5FD1E8DFA5C0007F889 /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,15 +140,26 @@
 			name = JournalView;
 			sourceTree = "<group>";
 		};
+		9F3C091A1E9DA953004B8256 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F3C091B1E9DA953004B8256 /* Willow.framework.dSYM */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9F890CEF1E7EE90500F46B0A = {
 			isa = PBXGroup;
 			children = (
+				9F3C091E1E9DA9CC004B8256 /* Willow.framework.dSYM */,
+				9F3C09171E9DA949004B8256 /* Willow.framework */,
 				9F4AA6061E8DFAE30007F889 /* SQLite.framework.dSYM */,
 				9F4AA5FC1E8DFA5C0007F889 /* SQLite.framework */,
 				9F890CFA1E7EE90500F46B0A /* InoJournal */,
 				9F890D0C1E7EE90500F46B0A /* InoJournalTests */,
 				9F890D171E7EE90500F46B0A /* InoJournalUITests */,
 				9F890CF91E7EE90500F46B0A /* Products */,
+				9F3C091A1E9DA953004B8256 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
