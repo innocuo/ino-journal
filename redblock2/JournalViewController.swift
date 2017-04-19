@@ -26,6 +26,8 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
     private var backgroundView:JournalBackground?
     private var delegate:AppDelegate?
     
+    private let maxTextLength = 320
+    
     var currentDisplayedIndex: Int = 0{
         didSet{
             updateDisplayedEntry()
@@ -52,7 +54,7 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
         
         super.viewDidLoad()
         
-        Log.debug ("view loaded")
+        Log.debug ("JournalViewController loaded")
         
         settingsMenu.addItem(NSMenuItem(title: "Quit", action: #selector(AppDelegate.quitApp(_:)), keyEquivalent: "q"))
         
@@ -62,7 +64,9 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
         //textField.textColor = NSColor(red: 209/255, green: 209/255, blue: 209/255, alpha: 1)
         textField.textContainerInset = NSSize(width:7, height: 0)
         textField.becomeFirstResponder()
-    
+        
+        textField.string = ""
+        textCount.stringValue = "\( maxTextLength )"
     }
     
     
@@ -164,10 +168,19 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
     
     
     //from NSTextViewDelegate
+    func textView(_ textView: NSTextView, shouldChangeTextIn affectedCharRange: NSRange, replacementString: String?) -> Bool {
+        
+        guard let text = textField.string else { return true }
+        let newLength = text.characters.count + (replacementString?.characters.count)! - affectedCharRange.length
+        return newLength <= maxTextLength
+    }
+    
+    
+    //from NSTextViewDelegate
     func textDidChange(_ notification: Notification) {
         
         let count = textField.string!.characters.count
-        textCount.stringValue = "\( count )"
+        textCount.stringValue = "\( maxTextLength-count )"
         
         if count>0 {
             saveBtn.isEnabled = true
@@ -180,7 +193,7 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
     func resetTextField(){
         
         textField.string = ""
-        textCount.stringValue = "0"
+        textCount.stringValue = "\( maxTextLength )"
         saveBtn.isEnabled = false
     }
 }

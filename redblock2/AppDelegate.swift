@@ -52,7 +52,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         //this is needed for when user clicks on another statusItem
         eventMonitor = EventMonitor(mask: [.rightMouseUp , .leftMouseUp]) { [unowned self] event in
-            print("event monitor event happened")
+            Log.event("event from event monitor")
             if self.popover.isShown{
                self.closePopover(event)
             }
@@ -102,7 +102,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     //convenience constructor to be called from other classes
     static func shared() -> AppDelegate
     {
-        print("get app delegate")
+        Log.debug("get app delegate")
         return NSApplication.shared().delegate as! AppDelegate
     }
     
