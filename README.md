@@ -8,13 +8,13 @@ The app is not intended for public use, so no support is given to compile, run, 
 
 ## Dependencies
 
-This project depends on [stephencelis/SQLite.swift](stephencelis/SQLite.swift).
-It uses [Carthage](/Carthage/Carthage) to add the SQLite framework.
+This project depends on [stephencelis/SQLite.swift](https://github.com/stephencelis/SQLite.swift).
+It uses [Carthage](https://github.com/Carthage/Carthage) to add the SQLite framework.
 
 ## Quick Installation
 
 * Clone this repository
-* install [Carthage](/Carthage/Carthage) (if you use brew: "brew install carthage")
+* install [Carthage](https://github.com/Carthage/Carthage) (if you use brew: "brew install carthage")
 * go to the project directory and run the add_frameworks.sh script (type ./add_frameworks.sh script in the Terminal)
 * run your project in XCode and compile the app
 
@@ -27,7 +27,7 @@ carthage bootstrap --platform macOS
 ```
 It should create a Carthage/Builds directory with the compiled SQLite framework. The project is already configured to reference those files.
 
-You really should read the [Carthage documentation](/Carthage/Carthage), it's such a cool tool.
+You really should read the [Carthage documentation](https://github.com/Carthage/Carthage), it's such a cool tool.
 
 
 ### Current Todo
