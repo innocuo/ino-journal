@@ -1,2 +1,2 @@
-github "stephencelis/SQLite.swift" ~> 0.11.3
-github "Nike-Inc/Willow" ~> 3.0
+github "stephencelis/SQLite.swift" ~> 0.11
+github "Nike-Inc/Willow" ~> 5.0
