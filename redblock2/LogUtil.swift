@@ -12,7 +12,7 @@ class LogUtil{
     
     var logger:Logger! = nil
     
-    private struct PrefixModifier: LogMessageModifier {
+    private struct PrefixModifier: LogModifier {
         
         func modifyMessage(_ message: String, with: LogLevel) -> String {
             return "[\(with.description)] \(message)"
@@ -25,24 +25,11 @@ class LogUtil{
     
     private func createLog() -> Logger {
         
-        let prefixModifier = PrefixModifier()
+        let prefixModifiers = [PrefixModifier()]
        
-        let modifiers: [  LogLevel : [LogMessageModifier] ] = {
-            
-            let modifiers: [LogMessageModifier] = [prefixModifier]
-            
-            return [
-                .warn: modifiers,
-                .error: modifiers,
-                .event: modifiers,
-                .debug: modifiers
-            ]
-        }()
+        let writers = [ConsoleWriter(modifiers: prefixModifiers)]
         
-        let configuration = Willow.LoggerConfiguration( modifiers: modifiers)
-
-        
-        return Logger( configuration: configuration )
+        return Logger( logLevels: [.all], writers: writers )
         
     }
     
@@ -54,15 +41,15 @@ class LogUtil{
     }
     
     func debug(_ message: String, _ file: String = #file, _ function: String = #function, _ line: Int = #line){
-        logger.debug( self.format( message, file, function, line) )
+        logger.debugMessage( self.format( message, file, function, line) )
     }
     
     func error(_ message: String, _ file: String = #file, _ function: String = #function, _ line: Int = #line){
-        logger.error( self.format( message, file, function, line) )
+        logger.errorMessage( self.format( message, file, function, line) )
     }
     
     func event(_ message: String, _ file: String = #file, _ function: String = #function, _ line: Int = #line){
-        logger.event( self.format( message, file, function, line) )
+        logger.eventMessage( self.format( message, file, function, line) )
     }
 }
 
