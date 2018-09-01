@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import redblock2
+@testable import InoJournal
 
 class redblock2Tests: XCTestCase {
     
