@@ -103,7 +103,7 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
     
     @objc func doSaveEntry(){
         
-        let str:String = (textField.textStorage as NSAttributedString!).string
+        let str:String = textField!.string
         
         if str.count <= 0{
             return
