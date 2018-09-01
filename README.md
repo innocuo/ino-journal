@@ -1,14 +1,14 @@
 # InoJournal
 
-InoJournal is a simple app to add quick entries to a sqlite database. It is intended as a work journal/log to keep track of what I'm doing day by day, sort of like a private Twitter.
+InoJournal is a simple app to add quick entries to a sqlite database. It is build in Swift 4. It is intended as a work journal/log to keep track of what I'm doing day by day, sort of like a private Twitter.
 
-The app is not intended for public use, so no support is given to compile, run, or use it. Who knows, this might change in the future if the app matures enough.
+The app is not intended for public use, so no support is given to compile, run, or use it. This might change in the future if the app matures enough.
 
 ![Alt text](screenshot.png?raw=true "InoJournal")
 
 ## Dependencies
 
-This project depends on [stephencelis/SQLite.swift](https://github.com/stephencelis/SQLite.swift).
+This project depends on [stephencelis/SQLite.swift](https://github.com/stephencelis/SQLite.swift) and [Nike-Inc/Willow](https://github.com/Nike-Inc/Willow)
 It uses [Carthage](https://github.com/Carthage/Carthage) to add the SQLite framework.
 
 ## Quick Installation
@@ -30,7 +30,7 @@ It should create a Carthage/Builds directory with the compiled SQLite framework.
 You really should read the [Carthage documentation](https://github.com/Carthage/Carthage), it's such a cool tool.
 
 
-### Current Todo
+### Planned
 
 * add a preference panel
 * add window that lists all entries
