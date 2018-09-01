@@ -42,8 +42,8 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
         if let frameView = self.view.window?.contentView?.superview {
             if backgroundView == nil {
                 backgroundView = JournalBackground(frame: frameView.bounds)
-                backgroundView!.autoresizingMask = NSAutoresizingMaskOptions([.viewWidthSizable, .viewHeightSizable]);
-                frameView.addSubview(backgroundView!, positioned: NSWindowOrderingMode.below, relativeTo: frameView)
+                backgroundView!.autoresizingMask = NSView.AutoresizingMask([NSView.AutoresizingMask.width, NSView.AutoresizingMask.height]);
+                frameView.addSubview(backgroundView!, positioned: NSWindow.OrderingMode.below, relativeTo: frameView)
             }
         }
         
@@ -170,8 +170,8 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
     //from NSTextViewDelegate
     func textView(_ textView: NSTextView, shouldChangeTextIn affectedCharRange: NSRange, replacementString: String?) -> Bool {
         
-        guard let text = textField.string else { return true }
-        let newLength = text.characters.count + (replacementString?.characters.count)! - affectedCharRange.length
+        guard let text = textField?.string else  { return true }
+        let newLength = text.count + (replacementString?.count)! - affectedCharRange.length
         return newLength <= maxTextLength
     }
     
@@ -179,7 +179,7 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
     //from NSTextViewDelegate
     func textDidChange(_ notification: Notification) {
         
-        let count = textField.string!.characters.count
+        let count = textField.string.count
         textCount.stringValue = "\( maxTextLength-count )"
         
         if count>0 {
@@ -226,7 +226,7 @@ extension JournalViewController{
     
     @IBAction func settings(_ sender: NSButton){
         
-        if let event = NSApplication.shared().currentEvent {
+        if let event = NSApplication.shared.currentEvent {
             NSMenu.popUpContextMenu( settingsMenu, with: event, for: sender)
         }
     }
@@ -235,6 +235,6 @@ extension JournalViewController{
 class JournalBackground:NSView{
     override func draw(_ dirtyRect:NSRect){
         NSColor(red: 85/255, green: 205/255, blue: 240/255, alpha: 1.0).set()
-        NSRectFill(self.bounds)
+        self.bounds.fill()
     }
 }

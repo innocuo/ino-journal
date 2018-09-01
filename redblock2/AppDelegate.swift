@@ -14,7 +14,7 @@ var Log: LogUtil!
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    let statusItem = NSStatusBar.system().statusItem(withLength: NSSquareStatusItemLength)
+    let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
     let popover = NSPopover()
     
     private var button:NSStatusBarButton?
@@ -31,7 +31,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //create menu bar icon button
         self.button = statusItem.button!
         if ((self.button) != nil) {
-            let img = NSImage(named: "StatusBarButtonImage")
+            let img = NSImage(named: NSImage.Name(rawValue: "StatusBarButtonImage"))
             img?.isTemplate = true
             
             self.button?.target = self
@@ -42,16 +42,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         //this is the popup where you enter journal entries
-        let journalView:JournalViewController = JournalViewController(nibName: "JournalViewController", bundle: nil)!
+        let journalView:JournalViewController = JournalViewController(nibName: NSNib.Name(rawValue: "JournalViewController"), bundle: nil)
         journalView.setDelegate(self)
         
         popover.contentViewController = journalView
         popover.animates = false
         //NSAppearance(named: <#T##String#>)
-        popover.appearance = NSAppearance( named: NSAppearanceNameAqua )
+        popover.appearance = NSAppearance( named: NSAppearance.Name.aqua )
         
         //this is needed for when user clicks on another statusItem
-        eventMonitor = EventMonitor(mask: [.rightMouseUp , .leftMouseUp]) { [unowned self] event in
+        eventMonitor = EventMonitor(mask: [NSEvent.EventTypeMask.rightMouseUp , NSEvent.EventTypeMask.leftMouseUp]) { [unowned self] event in
             Log.event("event from event monitor")
             if self.popover.isShown{
                self.closePopover(event)
@@ -95,7 +95,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func quitApp(_ sender:AnyObject?){
         
-        NSApplication.shared().terminate(self)
+        NSApplication.shared.terminate(self)
     }
     
     
@@ -103,7 +103,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     static func shared() -> AppDelegate
     {
         Log.debug("get app delegate")
-        return NSApplication.shared().delegate as! AppDelegate
+        return NSApplication.shared.delegate as! AppDelegate
     }
     
     //MARK: Popover display
@@ -114,7 +114,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
             statusItem.button?.highlight(true)
             
-            let img = NSImage(named: "StatusBarButtonImageOn")
+            let img = NSImage(named: NSImage.Name(rawValue: "StatusBarButtonImageOn"))
             img?.isTemplate = true
             self.button?.image = img
         }
@@ -124,7 +124,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func closePopover(_ sender:AnyObject?, _ deactivate_button:Bool = true){
         
         if button != nil{
-            let img = NSImage(named: "StatusBarButtonImage")
+            let img = NSImage(named: NSImage.Name(rawValue: "StatusBarButtonImage"))
             img?.isTemplate = true
             self.button?.image = img
         }

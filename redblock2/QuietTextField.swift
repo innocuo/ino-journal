@@ -22,7 +22,7 @@ class QuietTextField: NSTextView {
        
         //when command return is pressed
         if event.keyCode == 36 && event.modifierFlags.intersection(
-            .deviceIndependentFlagsMask) == .command {
+            NSEvent.ModifierFlags.deviceIndependentFlagsMask) == NSEvent.ModifierFlags.command {
             self.doCommand(by: #selector(JournalViewController.doSaveEntry))
             return
         }

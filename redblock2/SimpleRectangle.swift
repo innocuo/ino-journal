@@ -17,7 +17,7 @@ class SimpleRectangle: NSView{
     override func draw(_ rect: CGRect) {
         
         mainColor.set()
-        NSRectFill(self.bounds)
+        self.bounds.fill()
     }
     
     
