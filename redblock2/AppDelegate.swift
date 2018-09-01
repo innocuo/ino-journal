@@ -93,7 +93,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     
-    func quitApp(_ sender:AnyObject?){
+    @objc func quitApp(_ sender:AnyObject?){
         
         NSApplication.shared.terminate(self)
     }

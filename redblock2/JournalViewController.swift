@@ -101,11 +101,11 @@ class JournalViewController: NSViewController, NSTextViewDelegate{
     //MARK: Entries
     
     
-    func doSaveEntry(){
+    @objc func doSaveEntry(){
         
         let str:String = (textField.textStorage as NSAttributedString!).string
         
-        if str.characters.count <= 0{
+        if str.count <= 0{
             return
         }
         
